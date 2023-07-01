@@ -41,7 +41,7 @@
         width: 1px;
     }
 
-    .logo-image{
+    .logo-image {
         width: 60px;
         height: auto;
     }
@@ -53,7 +53,7 @@
     <!-- Logo Image-->
     <!-- <nav class="navbar navbar-light bg-light">   -->
     <a class="navbar-brand py-0 " href="<?php echo base_url('reading_corner'); ?>">
-        <img src="<?php echo base_url('assets/img/mental-health.png'); ?>" height="80" alt="logo" class = "logo-image">
+        <img src="<?php echo base_url('assets/img/mental-health.png'); ?>" height="80" alt="logo" class="logo-image">
     </a>
     <!-- </nav> -->
 
@@ -78,24 +78,24 @@
 
     <ul class="navbar-nav ml-auto">
 
-            <li class="nav-item dropdown no-arrow pl-1">
-                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span class="mr-2 d-none d-lg-inline small pr-2" style="color: white; font-weight:700; font-size:1.0em;"><?php echo $this->session->userdata('user_fname'); ?></span>
-                    <img class="img-profile rounded-circle" src="<?= base_url('assets/img/chat_user/profile_pic.png'); ?>">
+        <li class="nav-item dropdown no-arrow pl-1">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="mr-2 d-none d-lg-inline small pr-2" style="color: white; font-weight:700; font-size:1.0em;"><?php echo $this->session->userdata('user_fname'); ?></span>
+                <img class="img-profile rounded-circle" src="<?= base_url('assets/img/chat_user/profile_pic.png'); ?>">
+            </a>
+            <!-- Dropdown - User Information -->
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #6B9080;" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="<?= base_url('user/profile'); ?>" style="color: #DEDEDE;">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Profile
                 </a>
-                <!-- Dropdown - User Information -->
-                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #6B9080;" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="<?= base_url('user/profile'); ?>" style="color: #DEDEDE;">
-                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Profile
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a onclick="logout()" class="dropdown-item" style="color: #DEDEDE; cursor: pointer;">
-                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                        Log Out
-                    </a>
-                </div>
-            </li>
+                <div class="dropdown-divider"></div>
+                <a onclick="logout()" class="dropdown-item" style="color: #DEDEDE; cursor: pointer;">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Log Out
+                </a>
+            </div>
+        </li>
     </ul>
 
 </nav>
