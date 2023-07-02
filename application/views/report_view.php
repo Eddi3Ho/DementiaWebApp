@@ -23,6 +23,19 @@
         width: 100%;
         padding: 20px;
         display: grid;
+        grid-template-columns: 9.5fr 2.5fr;
+        /* grid-template-columns: 12fr 3.5fr 3.5fr; */
+        grid-gap: 30px;
+        min-height: 200px;
+        /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
+        border-radius: 20px;
+    }
+
+    .graphbox2 {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        display: grid;
         grid-template-columns: 12fr 3.5fr 3.5fr;
         grid-gap: 30px;
         min-height: 200px;
@@ -106,7 +119,8 @@
                             <div class="box">
                                 <div class="card-body">
                                     <h5 class="card-title">First attempt score</h5>
-                                    <p class="card-text">Your First attempt score : </p>
+                                    <p class="card-text">You have scored more than
+                                    <h1>80%</h1> of individuals on your very first attempt in the ""</p>
                                     <a href="#" class="btn btn-primary h-10">Show</a>
                                 </div>
                             </div>
@@ -115,7 +129,25 @@
                             <div class="box">
                                 <div class="card-body">
                                     <h5 class="card-title">Overall First Attempt Percentage</h5>
-                                    <p class="card-text">Your overall First Attempt Score % is :</p>
+                                    <p class="card-text">Overall score</p>
+                                    <a href="#" class="btn btn-primary">Show</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Highest Streak</h5>
+                                    <p class="card-text">Your Highest Streak is :</p>
+                                    <a href="#" class="btn btn-primary">Show</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Highest Streak</h5>
+                                    <p class="card-text">Your Highest Streak is :</p>
                                     <a href="#" class="btn btn-primary">Show</a>
                                 </div>
                             </div>
@@ -149,9 +181,13 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-12 px-2 py-2">
+                            <button type="button" class="btn btn-success" style="width: 100%;" onclick="generate_result('quiz_dealing')" data-toggle="modal" data-target="#check_result"><i class="fas fa-pen pr-2"></i>View Results</button>
+                        </div>
+                    </div>
 
 
-
+                    <div class="graphbox2">
                         <div class="box">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
@@ -184,6 +220,39 @@
                             </div>
                         </div>
 
+                        <div class="box">
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="card h-100 shadow mb-4">
+                                    <div class="card-header py-3" style="background-color: #9FE2BF">
+                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Reading Progress</div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="box">
+                                            <canvas id="doughnutChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="col-xl-12 col-lg-12">
+                                <div class="card h-100 shadow mb-4">
+                                    <div class="card-header py-3" style="background-color: #9FE2BF">
+                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Reading Progress</div>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <div class="box">
+                                            <canvas id="doughnutChart"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
 
 
@@ -198,28 +267,74 @@
                         data: {
                             labels: ['First Attempt', 'Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
                             datasets: [{
-                                label: 'Quiz Scores',
-                                data: [3, 1, 10, 6],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgba(255, 159, 64, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
+                                    label: 'First Attempt',
+                                    data: [3, 1, 10, 6],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
 
-                                    'rgba(201, 203, 207, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgb(255, 99, 132)',
-                                    'rgb(240, 159, 0)',
-                                    'rgb(153, 102, 255)',
-                                    'rgb(75, 192, 192)',
-                                    'rgb(54, 162, 235)',
+                                        'rgba(201, 203, 207, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(240, 159, 0)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(54, 162, 235)',
 
-                                    'rgb(201, 203, 207)'
-                                ],
-                                borderWidth: 2
-                            }]
+                                        'rgb(201, 203, 207)'
+                                    ],
+                                    borderWidth: 2
+                                }, {
+                                    label: 'Current Score',
+                                    data: [3, 1, 10, 6],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
+
+                                        'rgba(201, 203, 207, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(240, 159, 0)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(54, 162, 235)',
+
+                                        'rgb(201, 203, 207)'
+                                    ],
+                                    borderWidth: 2
+                                },
+                                {
+                                    label: 'Highest Streak',
+                                    data: [3, 1, 10, 6],
+                                    backgroundColor: [
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
+
+                                        'rgba(201, 203, 207, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(240, 159, 0)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(54, 162, 235)',
+
+                                        'rgb(201, 203, 207)'
+                                    ],
+                                    borderWidth: 2
+                                }
+                            ]
                         },
                         options: {
                             scales: {
