@@ -23,21 +23,11 @@
         width: 100%;
         padding: 20px;
         display: grid;
-        grid-template-columns: 9fr 3fr;
+        grid-template-columns: 9.5fr 2.5fr;
+        /* grid-template-columns: 12fr 3.5fr 3.5fr; */
         grid-gap: 30px;
         min-height: 200px;
         /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
-        border-radius: 20px;
-    }
-
-    .graphbox .box {
-        position: relative;
-        width: 100%;
-        padding: 20px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 12fr));
-        grid-gap: 30px;
-        min-height: 200px;
         border-radius: 20px;
     }
 
@@ -46,7 +36,7 @@
         width: 100%;
         padding: 20px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: 12fr 3.5fr 3.5fr;
         grid-gap: 30px;
         min-height: 200px;
         /* box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08); */
@@ -61,7 +51,7 @@
         width: 100%;
         box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
         border-radius: 20px;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 2fr));
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         display: grid;
         grid-gap: 20px;
     }
@@ -110,6 +100,9 @@
                             </div>
                             <div class="py-2 px-4" style="text-align: justify; font-weight:500;">This report is generated based on the Reading Progress & Quiz's result.</div>
                         </div>
+                        <div class="col-md-4 pt-5 pr-5">
+                            <a id="report_button" class="btn btn-primary" style="float:right; width:auto;">Print Report</a>
+                        </div>
                     </div>
 
                     <div class="px-4 pb-4">
@@ -120,232 +113,60 @@
 
                 <main>
 
-                    <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col col-sm-3 mb-4" style=" max-width: 18rem;">
-                            <a href="<?php echo base_url('internal/admin_panel/Users_information/students_info'); ?>" style="text-decoration:none">
-                                <div class="card border-right-primary shadow h-100 py-2">
-
-                                    <div class="card-body" href="">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-center text-xs font-weight-bold text-primary text-uppercase mb-2">
-                                                    You have scored more than
-                                                    <h1>80%</h1> of individuals on your very first attempt in the
-                                                </div>
-                                                <!-- <div id="student_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number">0</div> -->
-                                            </div>
-                                            <!-- <div class="col-4">
-                                                <i class="fas fa-book fa-2x text-gray-300"></i>
-                                            </div> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col mb-4">
-                            <!-- <a href="<?php echo base_url('internal/admin_panel/Users_information/employer_info'); ?>" style="text-decoration:none"> -->
-                            <div class="card border-left-success shadow h-100 py-2">
+                    <div class=" row justify-content-md-center pb-5 px-4">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="box">
                                 <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Employers</div>
-                                            <div id="e_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number">0</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-briefcase fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- </a> -->
-                        </div>
-
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col mb-4">
-                            <a href="<?= base_url('internal/admin_panel/Users_information/ea_info'); ?>" style="text-decoration:none">
-                                <div class="card border-left-danger shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                                    Education Agents</div>
-                                                <div id="ea_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number">0</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-user-tie fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col mb-4">
-                            <a href="<?= base_url('internal/admin_panel/Users_information/ac_info'); ?>" style="text-decoration:none">
-                                <div class="card border-left-info shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                    Academic Counsellors</div>
-                                                <div id="ac_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number">0</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col mb-4">
-                            <a href="<?= base_url('internal/admin_panel/Users_information/ep_info'); ?>" style="text-decoration:none">
-                                <div class="card border-left-warning shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                    Education Partners</div>
-                                                <div id="ep_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number">0</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-handshake fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col mb-4">
-                            <a href="<?= base_url('internal/admin_panel/Users_information/ep_info'); ?>" style="text-decoration:none">
-                                <div class="card border-left-warning shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                    Education Partners</div>
-                                                <div id="ep_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number">0</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-handshake fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col mb-4">
-                            <a href="<?= base_url('internal/admin_panel/Users_information/ep_info'); ?>" style="text-decoration:none">
-                                <div class="card border-left-warning shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col mr-2">
-                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                    Education Partners</div>
-                                                <div id="ep_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number">0</div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <i class="fas fa-handshake fa-2x text-gray-300"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-
-                    </div>
-
-
-                    <!-- <div class=" row justify-content-md-center pb-5 px-4">
-
-                        <div class="col-sm-5 mb-3 mb-sm-3">
-                            <div class="box ">
-                                <div class="card-body">
-                                    <h5 class="card-title"></h5>
+                                    <h5 class="card-title">First attempt score</h5>
                                     <p class="card-text">You have scored more than
                                     <h1>80%</h1> of individuals on your very first attempt in the ""</p>
                                     <a href="#" class="btn btn-primary h-10">Show</a>
                                 </div>
                             </div>
                         </div>
-
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Overall score</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Overall First Attempt Percentage</h5>
+                                    <p class="card-text">Overall score</p>
+                                    <a href="#" class="btn btn-primary">Show</a>
                                 </div>
                             </div>
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Highest Streak</h5>
+                                    <p class="card-text">Your Highest Streak is :</p>
+                                    <a href="#" class="btn btn-primary">Show</a>
                                 </div>
                             </div>
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Highest Streak</h5>
+                                    <p class="card-text">Your Highest Streak is :</p>
+                                    <a href="#" class="btn btn-primary">Show</a>
                                 </div>
                             </div>
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
+                        </div>
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="box">
+                                <div class="card-body">
+                                    <h5 class="card-title">Highest Streak</h5>
+                                    <p class="card-text">Your Highest Streak is :</p>
+                                    <a href="#" class="btn btn-primary">Show</a>
                                 </div>
                             </div>
-                            <div class="col-sm-3 mb-3 mb-sm-0">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 mb-3 mb-sm-0">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                    <!-- </div> -->
-
-                    <!-- </div> -->
-
-
+                        </div>
+                    </div>
 
 
                     <!-- Graph -->
                     <div class="graphbox">
-                        <div class="box mb-4">
+                        <div class="box">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
                                     <div class="card-header py-3" style="background-color: #9FE2BF">
@@ -360,9 +181,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-md-12 px-2 py-2">
+                            <button type="button" class="btn btn-success" style="width: 100%;" onclick="generate_result('quiz_dealing')" data-toggle="modal" data-target="#check_result"><i class="fas fa-pen pr-2"></i>View Results</button>
+                        </div>
+                    </div>
 
 
-                        <div class="box mb-4">
+                    <div class="graphbox2">
+                        <div class="box">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
                                     <div class="card-header py-3" style="background-color: #9FE2BF">
@@ -378,19 +204,11 @@
                             </div>
                         </div>
 
-
-
-                    </div>
-
-
-                    <div class="graphbox2">
-
-
                         <div class="box">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
                                     <div class="card-header py-3" style="background-color: #9FE2BF">
-                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Dementia Symptoms</div>
+                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Reading Progress</div>
                                     </div>
 
                                     <div class="card-body">
@@ -406,12 +224,12 @@
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
                                     <div class="card-header py-3" style="background-color: #9FE2BF">
-                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Tips for communicating with a person with Dementia</div>
+                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Reading Progress</div>
                                     </div>
 
                                     <div class="card-body">
                                         <div class="box">
-                                            <canvas id="doughnutChart2"></canvas>
+                                            <canvas id="doughnutChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
@@ -422,22 +240,18 @@
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
                                     <div class="card-header py-3" style="background-color: #9FE2BF">
-                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Dealing with the Troubling Behavior of A Person with Dementia</div>
+                                        <div class="text-xs font-weight-bold text-dark text-uppercase mb-1">Reading Progress</div>
                                     </div>
 
                                     <div class="card-body">
                                         <div class="box">
-                                            <canvas id="doughnutChart3"></canvas>
+                                            <canvas id="doughnutChart"></canvas>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
-
-
 
 
 
@@ -451,10 +265,10 @@
                     var myChart = new Chart(ctx, {
                         type: 'bar',
                         data: {
-                            labels: ['Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
+                            labels: ['First Attempt', 'Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
                             datasets: [{
                                     label: 'First Attempt',
-                                    data: [1, 10, 6],
+                                    data: [3, 1, 10, 6],
                                     backgroundColor: [
                                         'rgba(255, 99, 132, 0.2)',
                                         'rgba(255, 159, 64, 0.2)',
@@ -476,7 +290,7 @@
                                     borderWidth: 2
                                 }, {
                                     label: 'Current Score',
-                                    data: [5, 8, 4],
+                                    data: [3, 1, 10, 6],
                                     backgroundColor: [
                                         'rgba(255, 99, 132, 0.2)',
                                         'rgba(255, 159, 64, 0.2)',
@@ -499,7 +313,7 @@
                                 },
                                 {
                                     label: 'Highest Streak',
-                                    data: [1, 10, 5],
+                                    data: [3, 1, 10, 6],
                                     backgroundColor: [
                                         'rgba(255, 99, 132, 0.2)',
                                         'rgba(255, 159, 64, 0.2)',
@@ -523,17 +337,11 @@
                             ]
                         },
                         options: {
-                            maintainAspectRatio: false,
                             scales: {
                                 y: {
-                                    beginAtZero: true,
-
+                                    beginAtZero: true
                                 }
-
-
                             }
-
-
                         }
                     });
                 </script>
@@ -557,7 +365,6 @@
                             }]
                         },
                         options: {
-                            maintainAspectRatio: false,
                             responsive: true,
                         }
                     });
@@ -569,64 +376,19 @@
                     var myChart = new Chart(doughnutChart, {
                         type: 'doughnut',
                         data: {
-                            labels: ['Reading Progress'],
+                            labels: ['Reading 1', 'Reading 2', 'Reading 3'],
                             datasets: [{
-                                label: 'Dementia Symptoms',
-                                data: [30],
+                                label: 'Reading Progress',
+                                data: [300, 50, 100],
                                 backgroundColor: [
-                                    'rgb(255, 99, 180)'
-                                ],
-                                hoverOffset: 4
-                            }]
-                        },
-                        options: {
-                            maintainAspectRatio: false,
-                            responsive: true,
-                        }
-                    });
-                </script>
-
-                <script>
-                    var pieChart = document.getElementById('doughnutChart2').getContext('2d');
-                    var myChart = new Chart(doughnutChart2, {
-                        type: 'doughnut',
-                        data: {
-                            labels: ['Reading Progress'],
-                            datasets: [{
-                                label: '',
-                                data: [10],
-                                backgroundColor: [
-
+                                    'rgb(255, 99, 180)',
+                                    'rgb(54, 162, 235)',
                                     'rgb(255, 205, 86)'
                                 ],
                                 hoverOffset: 4
                             }]
                         },
                         options: {
-                            maintainAspectRatio: false,
-                            responsive: true,
-                        }
-                    });
-                </script>
-
-                <script>
-                    var pieChart = document.getElementById('doughnutChart3').getContext('2d');
-                    var myChart = new Chart(doughnutChart3, {
-                        type: 'doughnut',
-                        data: {
-                            labels: ['Reading Progress'],
-                            datasets: [{
-                                label: '',
-                                data: [300],
-                                backgroundColor: [
-
-                                    'rgb(54, 162, 235)'
-                                ],
-
-                            }]
-                        },
-                        options: {
-                            maintainAspectRatio: false,
                             responsive: true,
                         }
                     });
