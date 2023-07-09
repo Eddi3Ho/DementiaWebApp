@@ -1,6 +1,6 @@
 <script type="text/javascript">
     var base_url = "<?php echo base_url(); ?>";
-    var last = "<?php echo $reading_progress_data->symptoms_last; ?>";
+    var last = "<?php echo $reading_progress_data->dealing_last; ?>";
     console.log(last);
 </script>
 
@@ -86,7 +86,7 @@
                                     <div class="row">
                                         <div class="col-md-9">
                                             <div class="d-flex align-items-center">
-                                                <label class="mr-2 pt-2" style="font-size: 1.2rem;"></i>Understanding Dementia Symptoms</label>
+                                                <label class="mr-2 pt-2" style="font-size: 1.2rem;"></i>Dealing With People With Dementia</label>
                                             </div>
                                         </div>
                                         <div class="col-md-3 text-right">
