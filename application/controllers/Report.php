@@ -85,4 +85,16 @@ class Report extends CI_Controller
 
 	//         $this->load->view('report_view', $data);
 	// }
+
+
+	//reading progress
+	public function get_progress()
+	{
+		$user_id = $this->session->userdata('user_id');
+		$this->load->model('report_model');
+		$progress = $this->report_model->get_progress($user_id);
+
+		// Return the progress as JSON response
+		$this->output->set_content_type('application/json')->set_output(json_encode(['status' => 'success', 'data' => $progress]));
+	}
 }

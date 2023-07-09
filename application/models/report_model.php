@@ -44,4 +44,11 @@ class report_model extends CI_Model
         $this->db->where('user_id', $user_id);
         return $this->db->get('quiz_dealing')->row('score');
     }
+
+    //reading progress functions
+    public function get_progress_row($user_id)
+    {
+        $this->db->where('user_id', $user_id);
+        return $this->db->get('reading_progress')->row();
+    }
 }
