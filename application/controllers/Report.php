@@ -8,8 +8,11 @@ class Report extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('quiz_model');
+		$this->load->model('user_model');
 		$this->load->model('report_model');
+		$this->load->model('reading_corner_model');
+		$this->load->model('quiz_model');
+
 
 		// If user is not login bring them back to login page
 		if (!$this->session->has_userdata('has_login')) {
@@ -21,68 +24,26 @@ class Report extends CI_Controller
 	{
 		$data['title'] = 'Dementia App | Report';
 
-		// $usersLessThanScore = $this->report_model->score_less_than($userScore, $database);
-		// $totalUsers = $this->report_model->total_user_count($database);
-		// $scorePercentage = $this->report_model->count_percentage($userScore, $database);
+		$data['read_data'] = $this->reading_corner_model->get_reading_details($this->session->userdata('user_id'));
 
-		// $data = array(
-		// 	'user_score' => $userScore,
-		// 	'users_less_than_score' => $usersLessThanScore,
-		// 	'total_users' => $totalUsers,
-		// 	'score_percentage' => $scorePercentage
-		// );
-
-
+		$data['include_js'] = 'report';
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('report_view.php');
+		$this->load->view('report_view', $data);
 		$this->load->view('templates/footer');
 	}
-	//
 
-	// public function get_report()
-	// {
-	// 	$user_id = $this->session->userdata('user_id');
-	// 	$this->load->model('report_model');
-	// 	$progress = $this->report_model->get_report($user_id);
+	// // Get the user's ID from the session or any other source
+	// $user_id = $this->session->userdata('user_id');
+	// $userScore = $this->report_model->get_reportsymtom($user_id); // Replace $user_id with the actual user ID
+	// $totalCount = $this->report_model->total_user_count('quiz_symptom'); // Replace 'quiz_symptom' with the appropriate table name
 
-	// 	// Return the progress as JSON response
-	// 	$this->output->set_content_type('application/json')->set_output(json_encode(['status' => 'success', 'data' => $progress]));
-	// }
+	// $percentage = ($userScore / $totalCount) * 100;
+	// $percentage = round($percentage, 2); // Round the percentage to two decimal places
 
+	// $data['percentage'] = $percentage;
 
-	// public function generateReport()
-	// {
-	// 	$userScore = 80; // Replace with the user's actual score
-	// 	$database = 'users'; // Replace with the name of your database table
-
-	// 	// Load quiz_model
-
-	// 	// Get quiz data
-	// 	$quizData = $this->quiz_model->get_selected_quiz_details($, $database);
-
-	// 	// Extract score from quiz data
-	// 	$userScore = $quizData->score;
-
-	// 	// Use the score to generate the report
+	// Load the view
 
 
-	// 	$this->load->view('report_view', $data);
-	// }
-	// 	public function index()
-	//     {
-	//         $data['percentage'] = $this->report_model->count_percentage($user_score, $database); // Replace $user_score and $database with your actual values
-
-	//         // Generate data for pie chart
-	//         $data['pieChartLabels'] = []; // Replace with your pie chart labels
-	//         $data['pieChartData'] = []; // Replace with your pie chart data
-	//         $data['pieChartColors'] = []; // Replace with your pie chart colors
-
-	//         // Generate data for bar chart
-	//         $data['barChartLabels'] = []; // Replace with your bar chart labels
-	//         $data['barChartData'] = []; // Replace with your bar chart data
-	//         $data['barChartColors'] = []; // Replace with your bar chart colors
-
-	//         $this->load->view('report_view', $data);
-	// }
 }

@@ -48,7 +48,7 @@
 </style>
 
 <!-- Topbar -->
-<nav class="navbar sticky-top navbar-expand topbar" style="background-color: #6B9080;">
+<nav class="navbar sticky-top navbar-expand topbar" style="background-color: #1C3F3A;">
 
     <!-- Logo Image-->
     <!-- <nav class="navbar navbar-light bg-light">   -->
@@ -84,13 +84,13 @@
                 <img class="img-profile rounded-circle" src="<?= base_url('assets/img/chat_user/profile_pic.png'); ?>">
             </a>
             <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #6B9080;" aria-labelledby="userDropdown">
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #006463;" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="<?= base_url('user/profile'); ?>" style="color: #DEDEDE;">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
                 </a>
                 <div class="dropdown-divider"></div>
-                <a onclick="logout()" class="dropdown-item" style="color: #DEDEDE; cursor: pointer;">
+                <a onclick="logout()" class="dropdown-item" style="color:#DEDEDE; cursor: pointer;">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Log Out
                 </a>

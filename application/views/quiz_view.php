@@ -9,6 +9,22 @@
     html {
         scroll-behavior: smooth;
     }
+
+    .container-fluid {
+        width: 100%;
+        height: 100vh;
+        /* background-image: url(<?php echo base_url('assets/img/background3.jpg'); ?>); */
+        background-color: #E5E3D4;
+        background-position: center;
+        position: relative;
+        overflow: auto;
+    }
+
+    .transparent {
+        position: relative;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+    }
 </style>
 
 <!-- Top Navigation -->
@@ -26,25 +42,25 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div style='background-color:white;' class="container-fluid">
+                <div class="container-fluid">
 
                     <div class="row">
                         <div class="col-md-8">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4">
-                                <h1 class="h3 mb-0 text-gray-800 pt-4 font-weight-bold">Dementia Quiz</h1>
+                                <h1 class="h3 mb-0 pt-4 font-weight-bold" style="color:#1C3F3A">Dementia Quiz</h1>
                             </div>
-                            <div class="py-2 px-4" style="text-align: justify; font-weight:500;">Finish all the quizzes and grab your well-deserved completion certificate!</div>
+                            <div class="py-2 px-4" style="text-align: justify; font-weight:500; color:#1C3F3A">Finish all the quizzes and grab your well-deserved completion certificate!</div>
                         </div>
                         <div class="col-md-4 pt-5 pr-5">
-                            <?php if($qs_data->status == 3 && $qt_data->status == 3 && $qd_data->status == 3){ ?>
-                            <a id="leave_button" class="btn btn-primary" style="float:right; width:auto;"><i class="fas fa-medal pr-2"></i>Claim your certificate!</a>
+                            <?php if ($qs_data->status == 3 && $qt_data->status == 3 && $qd_data->status == 3) { ?>
+                                <a id="leave_button" class="btn btn-primary" style="float:right; width:auto;"><i class="fas fa-medal pr-2"></i>Claim your certificate!</a>
                             <?php } ?>
                         </div>
                     </div>
 
                     <div class="px-4 pb-4">
-                        <hr style=" width :100%; height:2px; background-color:#EAF4F4">
+                        <hr style=" width :100%; height:2px; background-color:#1C3F3A">
                     </div>
 
                     <div class="row justify-content-md-center pb-5 px-4">

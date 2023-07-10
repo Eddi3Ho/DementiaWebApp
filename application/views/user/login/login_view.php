@@ -9,6 +9,47 @@
     }, 5000); // <-- time in milliseconds
 </script>
 
+<style>
+    .logo-img {
+        width: 100px;
+        height: auto;
+        position: relative;
+        color: #F5F5F5;
+    }
+
+    .container-fluid {
+        width: 100%;
+        height: 100vh;
+        background-image: url(<?php echo base_url('assets/img/background.png'); ?>);
+        background-position: center;
+        position: relative;
+        overflow: scroll;
+    }
+
+    .transparent {
+        position: relative;
+        background: transparent;
+        border: 4px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .transparent2 {
+        position: relative;
+        background: transparent;
+        border: 4px solid rgba(255, 255, 255, 0.5);
+
+    }
+
+    .boxlog {
+        width: 100%;
+        height: 60vh;
+        /* background-image: url(<?php echo base_url('assets/img/old.jpg'); ?>); */
+        background-position: center;
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+    }
+</style>
+
 <body id="page-top" style='background-color:#f9f6f1;'>
 
     <!-- Page Wrapper -->
@@ -24,31 +65,37 @@
                 <div class="container-fluid">
 
                     <!-- Cards for registration -->
-                    <div class="row justify-content-md-center pt-5 pb-5" style='background-color:#f9f6f1;'>
+                    <div class="row justify-content-md-center pt-5 pb-5" style='text-align: center;'>
 
                         <!-- Steps -->
-                        <div class="col-xl-3">
-                            <div class="card h-100 " id='card1'>
-                                <div class="card-body" style="background-color:#DAE7E0">
+                        <div class="col-xl-3 ">
+                            <div class="card h-100 transparent2" id='card1'>
+                                <div class="container md-8 text-bold" style=" font-size:19px; background-color: #FFFF; font-weight:500;">
 
-                                    <div class="pl-3 pr-3 pt-4">
-                                        <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Join our Dementia APP in </div>
-                                        <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:green; font-weight:900;">3 STEPS</div>
+                                    <img class="card-img-top logo-img " src="<?php echo base_url('assets/img/dementia_new.png') ?>" alt="Card image cap">
+                                    | DEMENTIA APP
+                                </div>
+                                <div class="card-body ">
+
+
+                                    <div class="pl-3 pr-3 pt-4 boxlog">
+                                        <div class="pl-4" style="font-size:16px; font-weight:700; color:#F5F5F5;"> </div>
+                                        <!-- <div class="pt-2 pl-4 pb-3 text-center" style=" font-size:20px; color:#F5F5F5; font-weight:900;">DEMENTIA APP</div> -->
+
+                                        <div class="pl-5">
+                                            <div class="number pt-4 pl-5 pb-4" style="font-size:15px; color:#F5F5F5; font-weight:800;">About Us</div>
+                                        </div>
+                                        <div class="pl-4 pb-3" style="font-size:14px; color:#F5F5F5;">This is a user-friendly platform that provides knowledge about dementia symptoms, quizzes, and more. Users can learn about dementia through articles, videos, and infographics. The app features a symptom checker and an interactive quiz to test knowledge. It aims to be a reliable resource for individuals, caregivers, and healthcare professionals, promoting understanding and support for those affected by dementia.</div>
+
+                                        <!-- <div class="pl-4">
+                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#F5F5F5; font-weight:700;">02</div>
+                                        </div>
+                                        <div class="pl-4 pb-3" style="font-size:14px; color:#F5F5F5;">If you already have an existing account, login now with your credentials. </div>
 
                                         <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">01</div>
+                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#F5F5F5; font-weight:700;">03</div>
                                         </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">Select your role before you fill in your detail in the registration form.</div>
-
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">02</div>
-                                        </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">If you already have an existing account, login now with your credentials. </div>
-
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">03</div>
-                                        </div>
-                                        <div class="pl-4 pb-5" style="font-size:14px; color:black;">After login, you are on the main page based on your role. </div>
+                                        <div class="pl-4 pb-5" style="font-size:14px; color:#F5F5F5;">After login, you are on the main page based on your role. </div> -->
 
                                     </div>
 
@@ -58,10 +105,10 @@
 
                         <!-- Form -->
                         <div class="col-xl-6 ">
-                            <div class="card h-100" id='card2'>
+                            <div class="card h-100 transparent" id='card2'>
                                 <div class="card-body">
                                     <center>
-                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#787878; font-weight:700;">LOGIN PAGE</div>
+                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#F5F5F5; font-weight:700;">LOGIN PAGE</div>
                                     </center>
                                     <?= $this->session->flashdata('message') ?>
                                     <!-- Input fields (Form) -->
@@ -90,9 +137,9 @@
                                     <!-- End of Input fields (Form) -->
                                     <center>
                                         <div class="pt-5 pb-3">
-                                            <a class="" style="text-align:center;" href="<?= base_url('user/auth/registration'); ?>">Register an account</a>
+                                            <a class="" style="text-align:center; color: #F5F5F5;" href="<?= base_url('user/auth/registration'); ?>">Register an account</a>
                                         </div>
-                                        <a class="mt-5" style="text-align:center;" href="<?= base_url("user/auth/forgotPassword"); ?>">Forget your password?</a>
+                                        <a class="mt-5" style="text-align:center; color: #F5F5F5;" href="<?= base_url("user/auth/forgotPassword"); ?>">Forget your password?</a>
                                     </center>
                                 </div>
                             </div>

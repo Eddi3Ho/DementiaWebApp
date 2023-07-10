@@ -9,6 +9,21 @@
     html {
         scroll-behavior: smooth;
     }
+
+    .container-fluid {
+        width: 100%;
+        height: 100vh;
+        background-image: url(<?php echo base_url('assets/img/background.png'); ?>);
+        background-position: center;
+        position: relative;
+        overflow: auto;
+    }
+
+    .transparent {
+        position: relative;
+        background: transparent;
+        border: 3px solid rgba(255, 255, 255, 0.5);
+    }
 </style>
 
 <!-- Top Navigation -->
@@ -26,15 +41,15 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div style='background-color:white;' class="container-fluid">
+                <div class="container-fluid">
 
                     <div class="row">
                         <div class="col-md-8">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4">
-                                <h1 class="h3 mb-0 text-gray-800 pt-4 font-weight-bold">Reading Corner</h1>
+                                <h1 class="h3 mb-0 pt-4 font-weight-bold" style="color:#F5F5F5">Reading Corner</h1>
                             </div>
-                            <div class="py-2 px-4" style="text-align: justify; font-weight:500;">Read all the topic to get knowlege about dementia!</div>
+                            <div class="py-2 px-4" style="text-align: justify; font-weight:500; color:#F5F5F5">Read all the topic to get knowlege about dementia!</div>
                         </div>
                         <div class="col-md-4 pt-5 pr-5">
 
@@ -42,14 +57,14 @@
                     </div>
 
                     <div class="px-4 pb-4">
-                        <hr style=" width :100%; height:2px; background-color:#EAF4F4">
+                        <hr style=" width :100%; height:2px;">
                     </div>
 
                     <div class="row justify-content-md-center pb-5 px-4">
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
                                 <div class="card shadow">
-                                    <div class="card-body text-center bg-primary">
+                                    <div class="card-body text-center bg-success">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Understanding Dementia Symptoms</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">

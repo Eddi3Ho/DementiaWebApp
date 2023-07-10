@@ -50,6 +50,11 @@
         /* Adjust the desired left padding size */
         padding-right: 200px;
     }
+
+    .gutter1 {
+        /* background: linear-gradient(to right, #C3EDC0, #); */
+        border-radius: 20px;
+    }
 </style>
 
 <!-- Set base url to javascript variable-->
@@ -72,25 +77,25 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid pb-5" style="background-color:white;">
+                <div class="container-fluid pb-5" style="background: linear-gradient(to right, #439A97,#62B6B7,#97DECE,#CBEDD5);">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4 pt-3">
-                        <h1 class="h3 mb-0 text-gray-800 pt-4 font-weight-bold">Profile Settings</h1>
+                        <h1 class="h3 mb-0  pt-4 font-weight-bold" style="color:#F5F5F5">Profile Settings</h1>
                     </div>
-                    <div class="pb-2 px-4" style="text-align: justify; font-weight:500;">
+                    <div class="pb-2 px-4" style="text-align: justify; font-weight:500;color:#F5F5F5">
                         Change your profile and account settings
                     </div>
                     <div class="col-12 pt-4">
 
-                        <div class="card shadow no-gutters">
+                        <div class="card shadow no-gutters gutter1">
                             <div class="card-body no-gutters">
                                 <div class="row no-gutters px-2">
                                     <div class="col-md-4 custom-border column-padding py-4 px-3">
                                         <div class="pb-3 text-center">
                                             <img class="user-pic-small " src="<?= base_url('assets/img/chat_user/profile_pic.png'); ?>">
                                         </div>
-                                        <div class="capitalize-initials px-auto pb-5" style="font-weight:700; font-size:1.5rem; text-align: center;">
+                                        <div class="capitalize-initials px-auto pb-5" style="font-weight:700; font-size:1.5rem; text-align: center;color:#6b9080">
                                             <?= $user_data->user_fname ?>
                                             <?= $user_data->user_lname ?>
                                         </div>
@@ -113,7 +118,7 @@
                                     <div class="col-md-8 column-padding py-4 px-5">
                                         <div class="tab-content">
                                             <div class="tab-pane fade show active" id="accounts">
-                                                <h3 class="font-weight-bold">General Info</h3>
+                                                <h3 class="font-weight-bold" style="color:#6b9080">General Info</h3>
                                                 <div class="row pt-5">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -141,7 +146,7 @@
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="password">
-                                                <h3 class="font-weight-bold">Update Password</h3>
+                                                <h3 class="font-weight-bold" style="color:#6b9080">Update Password</h3>
 
                                                 <form method="post" action=" <?= base_url('user/profile/update_password'); ?>">
                                                     <div class="row pt-5 pb-4">
@@ -169,7 +174,7 @@
 
                                             </div>
                                             <div class="tab-pane fade" id="notification">
-                                                <h3 class="font-weight-bold">Notification</h3>
+                                                <h3 class="font-weight-bold" style="color:#6b9080">Notification</h3>
                                                 <div class="col-md-4 pt-5">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="checkbox" value="" id="check_notification" style="width: 20px; height: 20px;" <?php if ($user_data->email_notification) {
@@ -198,7 +203,7 @@
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="invitefriend">
-                                                <h3 class="font-weight-bold">Invite a friend</h3>
+                                                <h3 class="font-weight-bold" style="color:#6b9080">Invite a friend</h3>
                                                 <p>Invite your friend or family to register by sharing a link with your own personal code</p>
                                                 <div class="row pt-4">
                                                     <div class="col-md-7">
@@ -230,7 +235,7 @@
                         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle">Edit Profile Info</h5>
+                                    <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle" style="color:#6b9080">Edit Profile Info</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>

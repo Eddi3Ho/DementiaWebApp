@@ -38,10 +38,33 @@ class report_model extends CI_Model
         return round($percentage, 2);
     }
 
-    public function get_report($user_id)
+    public function get_reportsymtom($user_id)
+    {
+        $this->db->select('score');
+        $this->db->where('user_id', $user_id);
+        return $this->db->get('quiz_symptom')->row('score');
+    }
+
+
+
+    //
+    public function get_reporttips($user_id)
+    {
+        $this->db->select('score');
+        $this->db->where('user_id', $user_id);
+        return $this->db->get('quiz_tips')->row('score');
+    }
+
+    public function get_reportdealing($user_id)
     {
         $this->db->select('score');
         $this->db->where('user_id', $user_id);
         return $this->db->get('quiz_dealing')->row('score');
+    }
+
+    public function get_selected_quiz_details($user_id, $database)
+    {
+        $this->db->where('user_id', $user_id);
+        return $this->db->get($database)->row();
     }
 }
