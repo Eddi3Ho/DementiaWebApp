@@ -45,5 +45,4 @@ class Report extends CI_Controller
 
 	// Load the view
 
-
 }

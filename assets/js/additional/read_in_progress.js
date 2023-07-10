@@ -24,61 +24,14 @@ var symptoms_explanations = [
 	"Dementia can lead to a decline in initiative and motivation. Individuals may become passive, lose interest in their usual activities, and require constant prompting and encouragement to engage in daily tasks.",
 ];
 
-var tips = [
-	"Use simple and clear language",
-	"Maintain eye contact and non-verbal cues",
-	"Speak slowly and calmly",
-	"Give one instruction at a time",
-	"Use visual aids and gestures",
-	"Be patient and allow extra time",
-	"Avoid arguing or correcting",
-	"Listen actively",
-	"Use reminiscence therapy",
-	"Adapt to their communication style",
-];
-
-var tips_explanations = [
-	"Speak in short sentences and use simple words to ensure understanding.",
-	"Establish eye contact and use facial expressions and gestures to enhance communication.",
-	"Speak at a moderate pace, allowing time for processing and response.",
-	"Break down tasks and instructions into simple steps.",
-	"Incorporate visual aids and gestures to aid comprehension.",
-	"Practice patience and avoid rushing or interrupting.",
-	"Avoid arguments or corrections, focus on maintaining a positive conversation.",
-	"Give your full attention, show interest, and respond appropriately.",
-	"Encourage conversations that involve reminiscing about the past.",
-	"Adapt to the person's unique communication style and understand their intended meaning.",
-];
-
-var dealing = [
-	"Be patient and understanding",
-	"Maintain a calm and reassuring environment",
-	"Establish a routine",
-	"Use gentle and respectful touch",
-	"Maintain good non-verbal communication",
-	"Simplify choices",
-	"Break tasks into manageable steps",
-	"Avoid correcting or arguing",
-	"Practice active listening",
-	"Seek support and education",
-];
-
-var dealing_explanation = [
-	"Show patience and understanding when dealing with the challenges of dementia.",
-	"Create a calm and reassuring environment to help the person with dementia feel at ease.",
-	"Establishing a consistent routine can provide structure and familiarity.",
-	"Use gentle touch to convey love and reassurance, respecting the person's boundaries.",
-	"Non-verbal cues like facial expressions and body language are important for communication.",
-	"Simplify choices to prevent overwhelming the person with dementia.",
-	"Break down tasks into smaller steps to make them more manageable.",
-	"Avoid correcting or arguing, and focus on validating their feelings and experiences.",
-	"Listen actively, show genuine interest, and respond empathetically.",
-	"Seek support from dementia support groups and educational resources.",
-];
+if (last == 0) {
+	var currentIndex = 0;
+} else {
+	var currentIndex = last - 1;
+}
 
 $(document).ready(function () {
 	// Array index to keep track of the current topic
-	var currentIndex = 0;
 
 	// Function to update the topic and explanation
 	function updateContent(progress) {
@@ -102,12 +55,41 @@ $(document).ready(function () {
 
 	// Function to save the progress to the database
 	function saveProgress() {
+		var currentProgress = currentIndex + 1;
+		// Retrieve the saved progress from the database
 		$.ajax({
-			url: base_url + "reading_corner/save_progress",
-			type: "POST",
-			data: { progress: currentIndex + 1, stat: 1 },
+			url: base_url + "reading_corner/get_saved_progress",
+			type: "GET",
 			success: function (response) {
-				console.log("Progress saved successfully");
+				var savedProgress = parseInt(response.progress);
+
+				// Compare the current progress with the saved progress
+				if (currentProgress > savedProgress) {
+					// Only save the progress if it is larger than the saved progress
+					$.ajax({
+						url: base_url + "reading_corner/save_progress",
+						type: "POST",
+						data: { progress: currentProgress, stat: 1 },
+						success: function (response) {
+							console.log("Progress saved successfully");
+						},
+						error: function (xhr, status, error) {
+							console.error(error);
+						},
+					});
+				}
+			},
+			error: function (xhr, status, error) {
+				console.error(error);
+			},
+		});
+		// Save the current content to the symptoms_last field
+		$.ajax({
+			url: base_url + "reading_corner/save_symptoms_last",
+			type: "POST",
+			data: { last_progress: symptoms[currentIndex] },
+			success: function (response) {
+				console.log("Symptoms last saved successfully");
 			},
 			error: function (xhr, status, error) {
 				console.error(error);
@@ -116,7 +98,7 @@ $(document).ready(function () {
 	}
 
 	// Initial content update
-	updateContent();
+	updateContent(currentIndex);
 
 	// Navigation button click event for "Previous"
 	$("#previous_button").click(function () {
@@ -136,7 +118,7 @@ $(document).ready(function () {
 		}
 	});
 
-	// Navigation button click event for "Previous"
+	// Navigation button click event for "Leave"
 	$("#leave_button").click(function () {
 		Swal.fire({
 			text: "Are you sure you want leave?",

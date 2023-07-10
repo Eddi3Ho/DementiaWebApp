@@ -21,7 +21,7 @@ class Reading_corner extends CI_Controller
 	{
 		$data['title'] = 'Dementia App | Reading Corner';
 
-		$data['read_data'] = $this->reading_corner_model->get_reading_details($this->session->userdata('user_id'));
+		$data['read_data'] = $this->reading_corner_model->get_reading_symptoms_details($this->session->userdata('user_id'));
 
 		$data['include_js'] = 'read_in_progress';
 
@@ -37,21 +37,18 @@ class Reading_corner extends CI_Controller
 
 		if ($read_num == 1) {
 			$data['read_data'] = $this->reading_corner_model->get_reading_symptoms_details($this->session->userdata('user_id'));
-		} elseif ($read_num == 2) {
-			$data['read_data'] = $this->reading_corner_model->get_reading_tips_details($this->session->userdata('user_id'));
-		} elseif ($read_num == 3) {
-			$data['read_data'] = $this->reading_corner_model->get_reading_dealing_details($this->session->userdata('user_id'));
 		} else {
 			redirect('reading_corner');
 		}
 
 		// Load the progress and last open content from the database
 		$user_id = $this->session->userdata('user_id');
-		$data['symptoms'] = $this->reading_corner_model->get_progress($user_id);
-		$data['symptoms_last'] = $this->reading_corner_model->get_symptoms_last($user_id);
+		$data['reading_progress_data'] = $this->reading_corner_model->get_progress_row($user_id);
+		//die;
+		//$data['symptoms_last'] = $this->reading_corner_model->get_symptoms_last($user_id);
 
 		$this->load->view('templates/header', $data);
-		$this->load->view('read_in_progress_view.php', $data);
+		$this->load->view('read_in_progress_view.php');
 		$this->load->view('templates/footer');
 	}
 
@@ -88,5 +85,14 @@ class Reading_corner extends CI_Controller
 
 		// Return the progress as JSON response
 		$this->output->set_content_type('application/json')->set_output(json_encode(['status' => 'success', 'data' => $progress]));
+	}
+
+	public function get_saved_progress()
+	{
+		$user_id = $this->session->userdata('user_id');
+		// Retrieve the saved progress from the database
+		$saved_progress = $this->reading_corner_model->get_progress($user_id);
+		// Return the saved progress as a response
+		$this->output->set_content_type('application/json')->set_output(json_encode(['progress' => $saved_progress]));
 	}
 }
