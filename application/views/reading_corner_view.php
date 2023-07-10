@@ -151,7 +151,7 @@
                                             <li class="list-group-item">Time Reading: <?= $read_data->dealing_timer ?>s</li>
                                         <?php } ?>
                                     </ul>
-                                    <div class="card-body">
+                                    <div class="card-body transparent">
                                         <?php if ($read_data->dealing_status == 0) { ?>
                                             <a href="<?= base_url('reading_corner_dealing/read/3'); ?>" class="btn btn-success px-2 py-2" style="width: 100%;"><i class="fas fa-clipboard pr-2"></i>Read</a>
                                         <?php } elseif ($read_data->dealing_status == 1) { ?>
