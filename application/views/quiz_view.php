@@ -66,8 +66,8 @@
                     <div class="row justify-content-md-center pb-5 px-4">
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
-                                <div class="card shadow">
-                                    <div class="card-body text-center bg-primary">
+                                <div class="card shadow" style="border-radius: 20px;">
+                                    <div class="card-body text-center bg-primary" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Understanding Dementia Symptoms </h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
@@ -106,8 +106,8 @@
                         </div>
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
-                                <div class="card shadow">
-                                    <div class="card-body text-center bg-primary">
+                                <div class="card shadow" style="border-radius: 20px;">
+                                    <div class="card-body text-center bg-primary" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Tips For Communicating With Dementia</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
@@ -148,8 +148,8 @@
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
 
-                                <div class="card shadow">
-                                    <div class="card-body text-center bg-primary">
+                                <div class="card shadow" style="border-radius: 20px;">
+                                    <div class="card-body text-center bg-primary" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Dealing With People With Dementia</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">

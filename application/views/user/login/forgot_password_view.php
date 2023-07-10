@@ -23,17 +23,19 @@
 
     }
 
-    .card1 {
+    /* .card1 {
         position: relative;
         overflow: auto;
         width: 100%;
         /* Adjust the width of the card as needed */
-        height: 400px;
-        /* Adjust the height of the card as needed */
-        background-position: right;
-        background-image: url(<?php echo base_url('assets/img/demen.jpg'); ?>);
-        border: 2px;
+    height: 400px;
+    /* Adjust the height of the card as needed */
+    background-position: right;
+    background-image: url(<?php echo base_url('assets/img/demen.jpg'); ?>);
+    border: 2px;
     }
+
+    */
 </style>
 
 <script>
@@ -61,13 +63,13 @@
                     <div class="row justify-content-md-center pt-5 pb-5">
 
                         <!-- Steps -->
-                        <div class="col-xl-3">
+                        <!-- <div class="col-xl-3">
                             <div class="card h-100 " id='card1'>
-                                <div class="card1">
-                                    <!-- <img src="<?php echo base_url('assets/img/demen.jpg'); ?>" alt=" logo" class="background-image"> -->
+                                <div class="card1"> -->
+                        <!-- <img src="<?php echo base_url('assets/img/demen.jpg'); ?>" alt=" logo" class="background-image"> -->
 
-                                    <!-- <div class=" pl-3 pr-3 pt-4"> -->
-                                    <!-- <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Join Interactive Joint Education Employability System (iJEES) in </div>
+                        <!-- <div class=" pl-3 pr-3 pt-4"> -->
+                        <!-- <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Join Interactive Joint Education Employability System (iJEES) in </div>
                                         <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:green; font-weight:900;">3 STEPS</div>
 
                                         <div class="pl-4">
@@ -85,11 +87,11 @@
                                         </div>
                                         <div class="pl-4 pb-5" style="font-size:14px; color:black;">After login, you are on the main page based on your role. </div> -->
 
-                                    <!-- </div> -->
+                        <!-- </div> -->
 
-                                </div>
+                        <!-- </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <!-- Form -->
                         <div class="col-xl-6 ">

@@ -93,25 +93,25 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid" style="background: linear-gradient(to right, #439A97,#62B6B7,#97DECE,#CBEDD5);">
+                <div class="container-fluid" style="background:#E5E3D4">
 
                     <div class="row">
                         <div class="col-12 md-8">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4">
-                                <h1 class="h3 mb-0 pt-4 font-weight-bold " style="color:#F5F5F5">Report</h1>
+                                <h1 class="h3 mb-0 pt-4 font-weight-bold " style="color:#1C3F3A">Report</h1>
                             </div>
-                            <div class="py-2 px-4" style="text-align: justify; font-weight:500;color:#F5F5F5 ">This report is generated based on the Reading Progress & Quiz's result.</div>
+                            <div class="py-2 px-4" style="text-align: justify; font-weight:500;color:#1C3F3A ">This report is generated based on the Reading Progress & Quiz's result.</div>
                         </div>
                     </div>
 
                     <div class="px-4 pb-4">
-                        <hr style=" width :100%; height:2px; background-color:#EAF4F4">
+                        <hr style=" width :100%; height:2px; background-color:#1C3F3A">
                     </div>
                     <div class="row justify-content-center" style="box-shadow:30px;">
 
                         <div class="col-4 mb-4 ">
-                            <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card border-left-primary shadow h-100 py-2" style="border-radius: 30px;">
 
                                 <div class="card-body ">
                                     <div class="row no-gutters align-items-center">
@@ -129,7 +129,7 @@
 
 
                         <div class="col-4 mb-4 ">
-                            <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card border-left-success shadow h-100 py-2" style="border-radius: 30px;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -145,13 +145,13 @@
                         </div>
 
                         <div class="col mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card border-left-warning shadow h-100 py-2" style="border-radius: 30px;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-center text-xs font-weight-bold text-uppercase mb-2">
                                                 You have scored more than
-                                                <h1 class="text-warning"><i class="fa-solid fa-star" style="color:yellow;"></i>80%</h1> of individuals on your very first attempt in the <h3 class="text-warning" style="font-family: 'Roboto', sans-serif;">Dealing with people with Dementia
+                                                <h1 class="text-warning"></i>60%</h1> of individuals on your very first attempt in the <h3 class="text-warning" style="font-family: 'Roboto', sans-serif;">Dealing with people with Dementia
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@
                     <div class=row>
                         <!-- Pending Requests Card Example -->
                         <div class="col mb-4">
-                            <div class="card  shadow h-100 py-2">
+                            <div class="card  shadow h-100 py-2" style="border-radius: 20px;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -179,7 +179,7 @@
                         </div>
 
                         <div class="col mb-4">
-                            <div class="card shadow h-100 py-2">
+                            <div class="card shadow h-100 py-2" style="border-radius: 20px;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -195,7 +195,7 @@
                         </div>
 
                         <div class="col mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card border-left shadow h-100 py-2" style="border-radius: 20px;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -216,9 +216,10 @@
 
                     <!-- Graph -->
                     <div class="graphbox">
-                        <div class="box mb-4">
-                            <div class="col-xl-12 col-lg-12">
-                                <div class="card h-100 shadow mb-4">
+                        <div class="box mb-4" style="border-radius: 20px;">
+                            <div class="col-xl-12 col-lg-12" style="border-radius: 20px; background-color: #E5E3D4">
+                                <!-- //card hold -->
+                                <div class="card h-100 shadow mb-4 " style="border-radius: 20px;">
                                     <div class="card-header py-3" style="background-color: #1C3F3A">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">QUIZ Score</div>
                                     </div>
@@ -264,7 +265,7 @@
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Dementia Symptoms</div>
                                     </div>
 
-                                    <div class="card-body" style="background-color: #E5E3D4">
+                                    <div class="card-body" style="background-color: #E5E3D4;">
                                         <div class="box">
                                             <canvas id="chartProgress"></canvas>
                                         </div>
@@ -274,9 +275,9 @@
                         </div>
 
                         <div class="box">
-                            <div class="col-xl-12 col-lg-12">
+                            <div class="col-xl-12 col-lg-12 " card h-100 shadow mb-4"">
                                 <div class="card h-100 shadow mb-4">
-                                    <div class="card-header py-3" style="background-color: #1C3F3A">
+                                    <div class="card-header py-3" style="background-color: #1C3F3A ">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Tips for communicating with a person with Dementia</div>
                                     </div>
 

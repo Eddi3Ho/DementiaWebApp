@@ -39,6 +39,8 @@
 
     }
 
+    .card-img-top {}
+
     .boxlog {
         width: 100%;
         height: 60vh;
@@ -69,11 +71,11 @@
 
                         <!-- Steps -->
                         <div class="col-xl-3 ">
-                            <div class="card h-100 transparent2" id='card1'>
-                                <div class="container md-8 text-bold" style=" font-size:19px; background-color: #FFFF; font-weight:500;">
+                            <div class="card h-100 transparent2" id='card1' style="border-radius: 20px;">
+                                <div class="container md-8 text-bold" style=" font-size:19px; background-color: #FFFF; font-weight:500;border-top-left-radius: 20px;border-top-right-radius: 20px;padding:0;">
 
                                     <img class="card-img-top logo-img " src="<?php echo base_url('assets/img/dementia_new.png') ?>" alt="Card image cap">
-                                    | DEMENTIA APP
+                                    <span style="display: inline-block; padding: 10px;">| DEMENTIA APP</span>
                                 </div>
                                 <div class="card-body ">
 
@@ -85,7 +87,7 @@
                                         <div class="pl-5">
                                             <div class="number pt-4 pl-5 pb-4" style="font-size:15px; color:#F5F5F5; font-weight:800;">About Us</div>
                                         </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:#F5F5F5;">This is a user-friendly platform that provides knowledge about dementia symptoms, quizzes, and more. Users can learn about dementia through articles, videos, and infographics. The app features a symptom checker and an interactive quiz to test knowledge. It aims to be a reliable resource for individuals, caregivers, and healthcare professionals, promoting understanding and support for those affected by dementia.</div>
+                                        <div class="pl-4 pb-3" style="font-size:14px; color:#F5F5F5;">This is a user-friendly platform that provides knowledge about dementia symptoms, quizzes, and more. The app features an interactive quiz to test knowledge. It aims to be a reliable resource for individuals, caregivers, and healthcare professionals, promoting understanding and support for those affected by dementia.</div>
 
                                         <!-- <div class="pl-4">
                                             <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#F5F5F5; font-weight:700;">02</div>
