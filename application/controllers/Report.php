@@ -24,7 +24,7 @@ class Report extends CI_Controller
 	{
 		$data['title'] = 'Dementia App | Report';
 
-		// $data['read_data'] = $this->reading_corner_model->get_reading_details($this->session->userdata('user_id'));
+		$data['read_data'] = $this->reading_corner_model->get_reading_details($this->session->userdata('user_id'));
 
 		$data['include_js'] = 'report';
 
