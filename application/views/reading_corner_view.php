@@ -13,7 +13,7 @@
     .container-fluid {
         width: 100%;
         height: 100vh;
-        background-image: url(<?php echo base_url('assets/img/background.png'); ?>);
+        background-color: #FFFF;
         background-position: center;
         position: relative;
         overflow: auto;
@@ -47,9 +47,9 @@
                         <div class="col-md-8">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4">
-                                <h1 class="h3 mb-0 pt-4 font-weight-bold" style="color:#F5F5F5">Reading Corner</h1>
+                                <h1 class="h3 mb-0 pt-4 font-weight-bold" style="color:#000000">Reading Corner</h1>
                             </div>
-                            <div class="py-2 px-4" style="text-align: justify; font-weight:500; color:#F5F5F5">Read all the topic to get knowlege about dementia!</div>
+                            <div class="py-2 px-4" style="text-align: justify; font-weight:500; color:#000000">Read all the topic to get knowlege about dementia!</div>
                         </div>
                         <div class="col-md-4 pt-5 pr-5">
 
@@ -57,14 +57,14 @@
                     </div>
 
                     <div class="px-4 pb-4">
-                        <hr style=" width :100%; height:2px;">
+                        <hr style=" width :100%; height:2px;background-color:#000000">
                     </div>
 
                     <div class="row justify-content-md-center pb-5 px-4">
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
-                                <div class="card shadow">
-                                    <div class="card-body text-center bg-success">
+                                <div class="card shadow" style="border-radius: 20px;">
+                                    <div class="card-body text-center bg " style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Understanding Dementia Symptoms</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
@@ -99,8 +99,8 @@
 
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
-                                <div class="card shadow">
-                                    <div class="card-body text-center bg-primary">
+                                <div class="card shadow" style="border-radius: 20px;">
+                                    <div class="card-body text-center bg " style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Tips For Communicating With Dementia</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
@@ -135,8 +135,8 @@
 
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
-                                <div class="card shadow">
-                                    <div class="card-body text-center bg-primary">
+                                <div class="card shadow" style="border-radius: 20px;">
+                                    <div class="card-body text-center bg " style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Dealing With People With Dementia</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
