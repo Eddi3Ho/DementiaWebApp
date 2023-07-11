@@ -28,14 +28,12 @@
         overflow: auto;
         width: 100%;
         /* Adjust the width of the card as needed */
-    height: 400px;
+    /* height: 400px; */
     /* Adjust the height of the card as needed */
-    background-position: right;
+    /* background-position: right;
     background-image: url(<?php echo base_url('assets/img/demen.jpg'); ?>);
     border: 2px;
-    }
-
-    */
+    } */
 </style>
 
 <script>
@@ -95,47 +93,47 @@
 
                         <!-- Form -->
                         <div class="col-xl-6 ">
-                            <div class="card h-100 transparent" id='card2' ">
+                            <div class="card h-100 transparent" id='card2'>
                                 <div class=" card-body">
-                                <center>
-                                    <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#F5F5F5; font-weight:700;">FORGOT YOUR PASSWORD?</div>
-                                </center>
-                                <?= $this->session->flashdata('message') ?>
-                                <!-- Input fields (Form) -->
-                                <form class="user" method="post" action=" <?= base_url('user/auth/resetlink'); ?>">
-                                    <!-- Email-->
-                                    <div class="form-row pt-5 px-3">
-                                        <div class="form-group col-md-12 px-2">
-                                            <input type="email" name="user_email" class="form-control border-bottom" id="email" style="border: 0;" placeholder="Enter your email address" value="<?= set_value('user_email'); ?>">
-                                            <?= form_error('user_email', '<small class="text-danger pl-3">', '</small>'); ?>
+                                    <center>
+                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#F5F5F5; font-weight:700;">FORGOT YOUR PASSWORD?</div>
+                                    </center>
+                                    <?= $this->session->flashdata('message') ?>
+                                    <!-- Input fields (Form) -->
+                                    <form class="user" method="post" action=" <?= base_url('user/auth/resetlink'); ?>">
+                                        <!-- Email-->
+                                        <div class="form-row pt-5 px-3">
+                                            <div class="form-group col-md-12 px-2">
+                                                <input type="email" name="user_email" class="form-control border-bottom" id="email" style="border: 0;" placeholder="Enter your email address" value="<?= set_value('user_email'); ?>">
+                                                <?= form_error('user_email', '<small class="text-danger pl-3">', '</small>'); ?>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Submit button -->
-                                    <div class="pt-1 pr-4">
-                                        <button type="submit" class="btn btn-success" style="float:right; width:auto">Reset Password<i class="fas fa-check"></i></button>
-                                    </div>
-                                </form>
-                                <!-- End of Input fields (Form) -->
-                                <br><br>
-                                <center>
-                                    <!-- <div class="pt-5">
+                                        <!-- Submit button -->
+                                        <div class="pt-1 pr-4">
+                                            <button type="submit" class="btn btn-success" style="float:right; width:auto">Reset Password<i class="fas fa-check"></i></button>
+                                        </div>
+                                    </form>
+                                    <!-- End of Input fields (Form) -->
+                                    <br><br>
+                                    <center>
+                                        <!-- <div class="pt-5">
                                         <a style="text-align:center;" href="<?= base_url("user/auth/login"); ?>">Back to Login</a>
                                     </div> -->
-                                    <div class="pt-5">
-                                        <a class="btn btn-success d-block mx-auto" href="<?= base_url("user/auth/login"); ?>">Back to Login</a>
-                                    </div>
+                                        <div class="pt-5">
+                                            <a class="btn btn-success d-block mx-auto" href="<?= base_url("user/auth/login"); ?>">Back to Login</a>
+                                        </div>
 
-                                </center>
+                                    </center>
 
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- END OF ROW -->
-                <!-- END OF FORM -->
+                    <!-- END OF ROW -->
+                    <!-- END OF FORM -->
 
+                </div>
+                <!-- /.container-fluid -->
             </div>
-            <!-- /.container-fluid -->
-        </div>
-        <!-- End of Main Content -->
+            <!-- End of Main Content -->

@@ -216,14 +216,13 @@
 
                     <!-- Graph -->
                     <div class="graphbox">
-                        <div class="box mb-4" style="border-radius: 20px;">
-                            <div class="col-xl-12 col-lg-12" style="border-radius: 20px; background-color: #E5E3D4">
-                                <!-- //card hold -->
+
+                        <div class="box mb-4">
+                            <div class="col-xl-12 col-lg-12" style=" background-color: #E5E3D4">
                                 <div class="card h-100 shadow mb-4 " style="border-radius: 20px;">
                                     <div class="card-header py-3" style="background-color: #1C3F3A">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">QUIZ Score</div>
                                     </div>
-
                                     <div class="card-body" style="background-color: #E5E3D4">
                                         <div class="box">
                                             <canvas id="myChart"></canvas>
@@ -314,97 +313,8 @@
 
 
 
-
-
-
-
-
                 </div>
                 <!-- /.container-fluid -->
-
-
-
-
-
-
-                <!-- <div class=" row justify-content-md-center pb-5 px-4">
-
-                        <div class="col-sm-5 mb-3 mb-sm-3">
-                            <div class="box ">
-                                <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text">You have scored more than
-                                    <h1>80%</h1> of individuals on your very first attempt in the ""</p>
-                                    <a href="#" class="btn btn-primary h-10">Show</a>
-                                </div>
-                            </div>
-                        </div>
-
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Overall score</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 mb-3 mb-sm-3">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 mb-3 mb-sm-0">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 mb-3 mb-sm-0">
-                                <div class="box border-left-primary shadow h-100 py-2">
-                                    <div class="card-body">
-                                        <h5 class="card-title"></h5>
-                                        <p class="card-text">Your Highest Streak is :</p>
-                                        <a href="#" class="btn btn-primary">Show</a>
-                                    </div>
-                                </div>
-                            </div> -->
-
-                <!-- </div> -->
-
-                <!-- </div> -->
-
-
-
-
-
-
-
 
                 <script>
                     var ctx = document.getElementById('myChart').getContext('2d');

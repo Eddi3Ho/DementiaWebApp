@@ -49,6 +49,14 @@
         position: relative;
         background: transparent;
         border: 4px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur (15px);
+    }
+
+    .card2 {
+        position: relative;
+        background: transparent;
+        border: 4px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur (15px);
     }
 </style>
 

@@ -24,32 +24,35 @@
         background-position: center;
         position: relative;
         overflow: scroll;
+
     }
 
     .transparent {
         position: relative;
         background: transparent;
         border: 4px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur (20px);
     }
 
     .transparent2 {
         position: relative;
         background: transparent;
         border: 4px solid rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur (20px);
 
     }
 
-    .card-img-top {}
+    /* .card-img-top {} */
 
-    .boxlog {
+    /* .boxlog {
         width: 100%;
-        height: 60vh;
-        /* background-image: url(<?php echo base_url('assets/img/old.jpg'); ?>); */
-        background-position: center;
+        height: 60vh; */
+    /* background-image: url(<?php echo base_url('assets/img/old.jpg'); ?>); */
+    /* background-position: center;
         object-fit: cover;
         position: relative;
         overflow: hidden;
-    }
+    } */
 </style>
 
 <body id="page-top" style='background-color:#f9f6f1;'>
