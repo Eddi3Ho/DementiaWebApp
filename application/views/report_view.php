@@ -34,7 +34,6 @@
         grid-gap: 30px;
         min-height: 200px;
         border-radius: 20px;
-        background: transparent;
     }
 
     .graphbox2 {
@@ -59,11 +58,6 @@
         overflow: auto;
     } */
 
-    .transparent {
-        position: relative;
-        background: transparent;
-        border: 3px solid rgba(255, 255, 255, 0.5);
-    }
 
     .radius {
         border-radius: 20px;
@@ -93,32 +87,32 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid" style="background:#E5E3D4">
+                <div class="container-fluid" style="background:#FFFF">
 
                     <div class="row">
                         <div class="col-12 md-8">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4">
-                                <h1 class="h3 mb-0 pt-4 font-weight-bold " style="color:#1C3F3A">Report</h1>
+                                <h1 class="h3 mb-0 pt-4 font-weight-bold " style="color:#000000">Report</h1>
                             </div>
-                            <div class="py-2 px-4" style="text-align: justify; font-weight:500;color:#1C3F3A ">This report is generated based on the Reading Progress & Quiz's result.</div>
+                            <div class="py-2 px-4" style="text-align: justify; font-weight:500;color:#000000 ">This report is generated based on the Reading Progress & Quiz's result.</div>
                         </div>
                     </div>
 
                     <div class="px-4 pb-4">
-                        <hr style=" width :100%; height:2px; background-color:#1C3F3A">
+                        <hr style=" width :100%; height:2px; background-color:#000000">
                     </div>
                     <div class="row justify-content-center" style="box-shadow:30px;">
 
                         <div class="col-4 mb-4 ">
-                            <div class="card border-left-primary shadow h-100 py-2" style="border-radius: 30px;">
+                            <div class="card border-left-success shadow h-100 py-2" style="border-radius: 30px;">
 
                                 <div class="card-body ">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-center text-xs font-weight-bold text-uppercase mb-2">
                                                 You have scored more than
-                                                <h1 class="text-primary">50% </h1> of individuals on your very first attempt in the <h3 class="text-primary" style="font-family: 'Roboto', sans-serif;">Dementia Symptoms</h3>
+                                                <h1 class="text-danger">50% </h1> of individuals on your very first attempt in the <h3 class="text-success" style="font-family: 'Roboto', sans-serif;">Dementia Symptoms</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -135,7 +129,7 @@
                                         <div class="col mr-2">
                                             <div class="text-center text-xs font-weight-bold text-uppercase mb-2">
                                                 You have scored more than
-                                                <h1 class="text3" style="color:#9FE2BF">80%</h1> of individuals on your very first attempt in the <h3 class="text-success" style="font-family: 'Roboto', sans-serif;">Tips for communicating with Dementia
+                                                <h1 class="text-danger">80%</h1> of individuals on your very first attempt in the <h3 class="text-success" style="font-family: 'Roboto', sans-serif;">Tips for communicating with Dementia
                                             </div>
                                         </div>
                                     </div>
@@ -145,13 +139,13 @@
                         </div>
 
                         <div class="col mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2" style="border-radius: 30px;">
+                            <div class="card border-left-success shadow h-100 py-2" style="border-radius: 30px;">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-center text-xs font-weight-bold text-uppercase mb-2">
                                                 You have scored more than
-                                                <h1 class="text-warning"></i>60%</h1> of individuals on your very first attempt in the <h3 class="text-warning" style="font-family: 'Roboto', sans-serif;">Dealing with people with Dementia
+                                                <h1 class="text-danger"></i>60%</h1> of individuals on your very first attempt in the <h3 class="text-success" style="font-family: 'Roboto', sans-serif;">Dealing with people with Dementia
                                             </div>
                                         </div>
                                     </div>
@@ -171,7 +165,7 @@
                                             <div class="text-xs font-weight-bold text-uppercase mb-1" style="font-family: 'Roboto', sans-serif;">
                                                 Highest Streak in Quiz Dementia Symptoms
                                             </div>
-                                            <div id="ac_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number"><i class="fas fa-fire pr-2" style="color:red;"></i>8</div>
+                                            <div id="ac_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number"><i class="fas fa-fire pr-2" style="color:red;"></i><?= $qs_data->max_streak ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -186,7 +180,7 @@
                                             <div class="text-xs font-weight-bold text-uppercase mb-1" style="font-family: 'Roboto', sans-serif;">
                                                 Highest Streak in Quiz Tips for communicating with a person with Dementia
                                             </div>
-                                            <div id="ep_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number"><i class="fas fa-fire pr-2" style="color:red;"></i>3</div>
+                                            <div id="ep_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number"><i class="fas fa-fire pr-2" style="color:red;"></i><?= $qt_data->max_streak ?></div>
                                         </div>
 
                                     </div>
@@ -202,7 +196,7 @@
                                             <div class="text-xs font-weight-bold text-uppercase mb-1" style="font-family: 'Roboto', sans-serif;">
                                                 Highest Streak in Quiz Dealing with the Troubling Behavior of A Person with Dementia
                                             </div>
-                                            <div id="ep_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number text-warning "><i class="fas fa-fire pr-2" style="color:red;"></i>8</div>
+                                            <div id="ep_counter" class="h5 mb-0 font-weight-bold text-gray-800 counting_number text-warning "><i class="fas fa-fire pr-2" style="color:red;"></i><?= $qd_data->max_streak ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -218,12 +212,12 @@
                     <div class="graphbox">
 
                         <div class="box mb-4">
-                            <div class="col-xl-12 col-lg-12" style=" background-color: #E5E3D4">
+                            <div class="col-xl-12 col-lg-12" style=" background-color: #FFFF">
                                 <div class="card h-100 shadow mb-4 " style="border-radius: 20px;">
-                                    <div class="card-header py-3" style="background-color: #1C3F3A">
+                                    <div class="card-header py-3" style="background-color: #098886">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">QUIZ Score</div>
                                     </div>
-                                    <div class="card-body" style="background-color: #E5E3D4">
+                                    <div class="card-body" style="background-color: #f9f6f1">
                                         <div class="box">
                                             <canvas id="myChart"></canvas>
                                         </div>
@@ -236,11 +230,11 @@
                         <div class="box mb-4">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
-                                    <div class="card-header py-3" style="background-color: #1C3F3A">
+                                    <div class="card-header py-3" style="background-color: #098886">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Score</div>
                                     </div>
 
-                                    <div class="card-body" style="background-color: #E5E3D4">
+                                    <div class="card-body" style="background-color: #f9f6f1">
                                         <div class="box">
                                             <canvas id="pieChart"></canvas>
                                         </div>
@@ -260,11 +254,11 @@
                         <div class="box">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
-                                    <div class="card-header py-3" style="background-color: #1C3F3A">
+                                    <div class="card-header py-3" style="background-color: #098886">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Dementia Symptoms</div>
                                     </div>
 
-                                    <div class="card-body" style="background-color: #E5E3D4;">
+                                    <div class="card-body" style="background-color: #f9f6f1;">
                                         <div class="box">
                                             <canvas id="chartProgress"></canvas>
                                         </div>
@@ -274,13 +268,13 @@
                         </div>
 
                         <div class="box">
-                            <div class="col-xl-12 col-lg-12 " card h-100 shadow mb-4"">
+                            <div class="col-xl-12 col-lg-12 ">
                                 <div class="card h-100 shadow mb-4">
-                                    <div class="card-header py-3" style="background-color: #1C3F3A ">
+                                    <div class="card-header py-3" style="background-color: #098886 ">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Tips for communicating with a person with Dementia</div>
                                     </div>
 
-                                    <div class="card-body" style="background-color: #E5E3D4">
+                                    <div class="card-body" style="background-color: #f9f6f1">
                                         <div class="box">
                                             <canvas id="doughnutChart2"></canvas>
                                         </div>
@@ -292,11 +286,11 @@
                         <div class="box">
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
-                                    <div class="card-header py-2" style="background-color: #1C3F3A">
+                                    <div class="card-header py-2" style="background-color: #098886">
                                         <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Dealing with the Troubling Behavior of A Person with Dementia</div>
                                     </div>
 
-                                    <div class="card-body" style="background-color: #E5E3D4">
+                                    <div class="card-body" style="background-color: #f9f6f1">
                                         <div class="box">
                                             <canvas id="doughnutChart3"></canvas>
                                         </div>
@@ -325,7 +319,7 @@
                             labels: ['Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
                             datasets: [{
                                     label: 'First Attempt',
-                                    data: [1, 10, 6],
+                                    data: [1, 2, 3],
                                     backgroundColor: [
                                         'rgba(255, 99, 132, 0.2)',
                                         'rgba(255, 159, 64, 0.2)',
@@ -347,7 +341,7 @@
                                     borderWidth: 2
                                 }, {
                                     label: 'Current Score',
-                                    data: [5, 8, 4],
+                                    data: [3, 4, 5],
                                     backgroundColor: [
                                         'rgba(255, 99, 132, 0.2)',
                                         'rgba(255, 159, 64, 0.2)',
@@ -370,7 +364,7 @@
                                 },
                                 {
                                     label: 'Highest Streak',
-                                    data: [1, 10, 5],
+                                    data: [<?= $qs_data->max_streak ?>, <?= $qt_data->max_streak ?>, <?= $qd_data->max_streak ?>],
                                     backgroundColor: [
                                         'rgba(255, 99, 132, 0.2)',
                                         'rgba(255, 159, 64, 0.2)',
@@ -419,7 +413,7 @@
                             labels: ['Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
                             datasets: [{
                                 label: 'Quiz Score',
-                                data: [5, 10, 2],
+                                data: [5, 10, 1],
                                 backgroundColor: [
                                     'rgb(240, 159, 0)',
                                     'rgb(153, 102, 255)',

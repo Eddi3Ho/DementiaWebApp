@@ -14,6 +14,7 @@ class Report extends CI_Controller
 		$this->load->model('quiz_model');
 
 
+
 		// If user is not login bring them back to login page
 		if (!$this->session->has_userdata('has_login')) {
 			redirect('user/auth/login');
@@ -24,7 +25,12 @@ class Report extends CI_Controller
 	{
 		$data['title'] = 'Dementia App | Report';
 
-		$data['read_data'] = $this->reading_corner_model->get_reading_details($this->session->userdata('user_id'));
+
+		$data['qs_data'] = $this->quiz_model->get_qs_details($this->session->userdata('user_id'));
+		$data['qt_data'] = $this->quiz_model->get_qt_details($this->session->userdata('user_id'));
+		$data['qd_data'] = $this->quiz_model->get_qd_details($this->session->userdata('user_id'));
+
+		// $data['read_data'] = $this->reading_corner_model->get_reading_details($this->session->userdata('user_id'));
 
 		$data['include_js'] = 'report';
 

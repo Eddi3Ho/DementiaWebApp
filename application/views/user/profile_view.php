@@ -77,7 +77,7 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid pb-5" style="background: linear-gradient(to right, #439A97,#62B6B7,#97DECE,#CBEDD5);">
+                <div class="container-fluid pb-5" style="background-color:#FFFF">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4 pt-3">

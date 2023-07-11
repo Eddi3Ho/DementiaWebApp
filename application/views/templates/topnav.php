@@ -1,6 +1,6 @@
 <style>
     .topnav {
-        color: #DEDEDE;
+        color: #F5F5F5;
         font-size: 1.1rem;
         font-weight: 600;
     }
@@ -48,7 +48,7 @@
 </style>
 
 <!-- Topbar -->
-<nav class="navbar sticky-top navbar-expand topbar" style="background-color: #1C3F3A;">
+<nav class="navbar sticky-top navbar-expand topbar" style="background-color: #098886;">
 
     <!-- Logo Image-->
     <!-- <nav class="navbar navbar-light bg-light">   -->
@@ -84,7 +84,7 @@
                 <img class="img-profile rounded-circle" src="<?= base_url('assets/img/chat_user/profile_pic.png'); ?>">
             </a>
             <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #1C3F3A;" aria-labelledby="userDropdown">
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #098886;" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="<?= base_url('user/profile'); ?>" style="color: #F5F5F5;">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
