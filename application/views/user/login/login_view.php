@@ -9,6 +9,11 @@
     }, 5000); // <-- time in milliseconds
 </script>
 
+<style>
+
+
+</style>
+
 <body id="page-top" style='background-color:#f9f6f1;'>
 
     <!-- Page Wrapper -->
@@ -29,24 +34,28 @@
                         <!-- Steps -->
                         <div class="col-xl-3">
                             <div class="card h-100 " id='card1'>
-                                <div class="card-body" style="background-color:#DAE7E0">
+                                <div class="card-body" style="background-color:#B9EDDD">
 
-                                    <div class="pl-3 pr-3 pt-4">
-                                        <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Join our Dementia APP in </div>
-                                        <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:green; font-weight:900;">3 STEPS</div>
+                                    <!-- <div class="d-flex justify-content-center mb-4">
+                                        <img class="card-img-top logo-img " src="<?php echo base_url('assets/img/mental-health.png') ?>" height="80" alt="logo" class="logo-image">
+                                    </div> -->
+
+                                    <div class="pl-3 pr-3">
+                                        <div class="pl-4" style="font-size:16px; font-weight:700; color:black;"></div>
+                                        <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:#0B666A; font-weight:900;">3 STEPS</div>
 
                                         <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">01</div>
+                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#0B666A; font-weight:900;">01</div>
                                         </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">Select your role before you fill in your detail in the registration form.</div>
+                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">Fill in your detail in the registration form.</div>
 
                                         <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">02</div>
+                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#0B666A; font-weight:900;">02</div>
                                         </div>
                                         <div class="pl-4 pb-3" style="font-size:14px; color:black;">If you already have an existing account, login now with your credentials. </div>
 
                                         <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">03</div>
+                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#0B666A; font-weight:900;">03</div>
                                         </div>
                                         <div class="pl-4 pb-5" style="font-size:14px; color:black;">After login, you are on the main page based on your role. </div>
 
@@ -57,9 +66,9 @@
                         </div>
 
                         <!-- Form -->
-                        <div class="col-xl-6 ">
+                        <div class="col-xl-6 " style="border-radius: 30px;">
                             <div class="card h-100" id='card2'>
-                                <div class="card-body">
+                                <div class="card-body" style="border-radius: 30px;">
                                     <center>
                                         <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#787878; font-weight:700;">LOGIN PAGE</div>
                                     </center>

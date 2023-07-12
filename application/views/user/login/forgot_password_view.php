@@ -10,7 +10,7 @@
     .container-fluid {
         width: 100%;
         height: 100vh;
-        background-image: url(<?php echo base_url('assets/img/background.png'); ?>);
+        background-color: #f9f6f1;
         background-position: center;
         position: relative;
         overflow: auto;
@@ -18,8 +18,9 @@
 
     .transparent {
         position: relative;
-        background: transparent;
+        background: #FFFF;
         border: 3px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
 
     }
 
@@ -96,7 +97,7 @@
                             <div class="card h-100 transparent" id='card2'>
                                 <div class=" card-body">
                                     <center>
-                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#F5F5F5; font-weight:700;">FORGOT YOUR PASSWORD?</div>
+                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#000000; font-weight:700;">FORGOT YOUR PASSWORD?</div>
                                     </center>
                                     <?= $this->session->flashdata('message') ?>
                                     <!-- Input fields (Form) -->
