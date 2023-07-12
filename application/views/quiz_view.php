@@ -67,7 +67,7 @@
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
                                 <div class="card shadow" style="border-radius: 20px;">
-                                    <div class="card-body text-center bg " style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
+                                    <div class="card-body text-center bg-" style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Understanding Dementia Symptoms </h5>
                                     </div>
                                     <ul class="list-group list-group-flush">

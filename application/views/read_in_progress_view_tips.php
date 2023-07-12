@@ -80,13 +80,13 @@
                     <div class="row justify-content-md-center py-5" id="main_quiz_card">
                         <div class="col-md-8">
 
-                            <div class="card shadow" style="border-top-left-radius: 20px; border-top-right-radius: 20px;border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
-                                <div class="card-header" style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
+                            <div class="card shadow">
+                                <div class="card-header">
 
-                                    <div class="row" style="border-top-left-radius: 20px; border-top-right-radius: 20px;">
+                                    <div class="row">
                                         <div class="col-md-9">
                                             <div class="d-flex align-items-center">
-                                                <label class="mr-2 pt-2 text-white" style="font-size: 1.2rem;"></i>Tips For Communicating With Dementia</label>
+                                                <label class="mr-2 pt-2" style="font-size: 1.2rem;"></i>Tips For Communicating With Dementia</label>
                                             </div>
                                         </div>
                                         <div class="col-md-3 text-right">
@@ -101,14 +101,14 @@
                                 <div class="card-body question_card_body text-left" style="height: 100px;">
                                     <h5 class="card-title  px-5" id="explanations">Explanations</h5>
                                 </div>
-                                <div class="card-header" style="border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+                                <div class="card-header">
 
                                     <div class="row">
                                         <div class="col-md-9 text-left">
-                                            <button id="previous_button" class="btn btn-success"><i class="fas fa-arrow-left pr-2"></i>Previous</a>
+                                            <button id="previous_button" class="btn btn-danger"><i class="fas fa-arrow-left pr-2"></i>Previous</a>
                                         </div>
                                         <div class="col-md-3 text-right">
-                                            <button id="next_button" class="btn btn-success"><i class="fas fa-arrow-right pr-2"></i>Next</button>
+                                            <button id="next_button" class="btn btn-danger"><i class="fas fa-arrow-right pr-2"></i>Next</button>
                                         </div>
                                     </div>
 

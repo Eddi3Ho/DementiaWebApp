@@ -319,34 +319,46 @@
                             labels: ['Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
                             datasets: [{
                                     label: 'First Attempt',
-                                    data: [8, 6, 8],
+                                    data: [1, 2, 3],
                                     backgroundColor: [
-                                        'rgba(7, 25, 82,0.2)',
-                                        'rgba(7, 25, 82,0.2)',
-                                        'rgba(7, 25, 82,0.2)'
-                                      
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
+
+                                        'rgba(201, 203, 207, 0.2)'
                                     ],
                                     borderColor: [
-                                        'rgb(7, 25, 82)',
-                                        'rgb(7, 25, 82)',
-                                        'rgb(7, 25, 82)'
-                                   
+                                        'rgb(255, 99, 132)',
+                                        'rgb(240, 159, 0)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(54, 162, 235)',
+
+                                        'rgb(201, 203, 207)'
                                     ],
                                     borderWidth: 2
                                 }, {
                                     label: 'Current Score',
-                                    data: [<?= $qs_data->score ?>, <?= $qt_data->score ?>, <?= $qd_data->score ?>],
+                                    data: [3, 4, 5],
                                     backgroundColor: [
-                                    
-                                        'rgba(53, 162, 159,0.2)',
-                                        'rgba(53, 162, 159,0.2)',
-                                        'rgba(53, 162, 159,0.2)'
-                                    ],
-                                    borderColor: [                                    
-                                        'rgb(53, 162, 159)',
-                                        'rgb(53, 162, 159)',
-                                        'rgb(53, 162, 159)'
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
 
+                                        'rgba(201, 203, 207, 0.2)'
+                                    ],
+                                    borderColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(240, 159, 0)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(54, 162, 235)',
+
+                                        'rgb(201, 203, 207)'
                                     ],
                                     borderWidth: 2
                                 },
@@ -354,17 +366,22 @@
                                     label: 'Highest Streak',
                                     data: [<?= $qs_data->max_streak ?>, <?= $qt_data->max_streak ?>, <?= $qd_data->max_streak ?>],
                                     backgroundColor: [
-    
-                                      
+                                        'rgba(255, 99, 132, 0.2)',
+                                        'rgba(255, 159, 64, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
 
-                                        'rgba(151, 254, 237,0.2)',
-                                        'rgba(151, 254, 237,0.2)',
-                                        'rgba(151, 254, 237,0.2)'
+                                        'rgba(201, 203, 207, 0.2)'
                                     ],
                                     borderColor: [
-                                        'rgb(151, 254, 237)',
-                                        'rgb(151, 254, 237)',
-                                        'rgb(151, 254, 237)'
+                                        'rgb(255, 99, 132)',
+                                        'rgb(240, 159, 0)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(54, 162, 235)',
+
+                                        'rgb(201, 203, 207)'
                                     ],
                                     borderWidth: 2
                                 }
@@ -396,11 +413,11 @@
                             labels: ['Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
                             datasets: [{
                                 label: 'Quiz Score',
-                                data: [<?= $qs_data->score ?>, <?= $qt_data->score ?>, <?= $qd_data->score ?>],
+                                data: [5, 10, 1],
                                 backgroundColor: [
-                                    'rgb(7, 25, 82)',
-                                    'rgb(11, 102, 106)',
-                                    'rgb(151, 254, 237)'
+                                    'rgb(240, 159, 0)',
+                                    'rgb(153, 102, 255)',
+                                    'rgb(75, 192, 192)'
                                 ],
                                 hoverOffset: 4
                             }]
