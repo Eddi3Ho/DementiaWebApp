@@ -43,7 +43,7 @@
     }, 5000); // <-- time in milliseconds
 </script>
 
-<body id="page-top" style='background-color:#f9f6f1;'>
+<body id="page-top" style='background-color:white;'>
 
     <!-- Page Wrapper -->
     <div id="wrapper">

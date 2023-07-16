@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-4 pt-5 pr-5">
                             <?php if ($qs_data->status == 3 && $qt_data->status == 3 && $qd_data->status == 3) { ?>
-                                <a id="leave_button" class="btn btn-success" style="float:right; width:auto;"><i class="fas fa-medal pr-2"></i>Claim your certificate!</a>
+                                <a id="leave_button" class="btn btn-primary" style="float:right; width:auto;"><i class="fas fa-medal pr-2"></i>Claim your certificate!</a>
                             <?php } ?>
                         </div>
                     </div>
