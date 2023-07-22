@@ -26,9 +26,15 @@ class Report extends CI_Controller
 		$data['title'] = 'Dementia App | Report';
 
 
+		//quiz score
 		$data['qs_data'] = $this->quiz_model->get_qs_details($this->session->userdata('user_id'));
 		$data['qt_data'] = $this->quiz_model->get_qt_details($this->session->userdata('user_id'));
 		$data['qd_data'] = $this->quiz_model->get_qd_details($this->session->userdata('user_id'));
+
+		//reading progress
+		$data['read_data'] = $this->reading_corner_model->get_reading_symptoms_details($this->session->userdata('user_id'));
+		$data['read_data'] = $this->reading_corner_model->get_reading_tips_details($this->session->userdata('user_id'));
+		$data['read_data'] = $this->reading_corner_model->get_reading_dealing_details($this->session->userdata('user_id'));
 
 		// $data['read_data'] = $this->reading_corner_model->get_reading_details($this->session->userdata('user_id'));
 

@@ -319,46 +319,44 @@
                             labels: ['Understanding Dementia Symptoms', 'Tips For Communicating With Dementia', 'Dealing With People With Dementia'],
                             datasets: [{
                                     label: 'First Attempt',
-                                    data: [1, 2, 3],
+                                    data: [<?= $qs_data->first_attempt_score ?>, <?= $qt_data->first_attempt_score ?>, <?= $qd_data->first_attempt_score ?>],
                                     backgroundColor: [
-                                        'rgba(255, 99, 132, 0.2)',
-                                        'rgba(255, 159, 64, 0.2)',
-                                        'rgba(153, 102, 255, 0.2)',
-                                        'rgba(75, 192, 192, 0.2)',
-                                        'rgba(54, 162, 235, 0.2)',
 
-                                        'rgba(201, 203, 207, 0.2)'
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)',
+                                        'rgba(153, 102, 255, 0.2)'
+
                                     ],
                                     borderColor: [
-                                        'rgb(255, 99, 132)',
-                                        'rgb(240, 159, 0)',
-                                        'rgb(153, 102, 255)',
-                                        'rgb(75, 192, 192)',
-                                        'rgb(54, 162, 235)',
 
-                                        'rgb(201, 203, 207)'
+                                        'rgb(153, 102, 255)',
+                                        'rgb(153, 102, 255)',
+                                        'rgb(153, 102, 255)'
+
+
+
                                     ],
                                     borderWidth: 2
                                 }, {
                                     label: 'Current Score',
-                                    data: [3, 4, 5],
+                                    data: [<?= $qs_data->score ?>, <?= $qt_data->score ?>, <?= $qd_data->score ?>],
                                     backgroundColor: [
-                                        'rgba(255, 99, 132, 0.2)',
-                                        'rgba(255, 159, 64, 0.2)',
-                                        'rgba(153, 102, 255, 0.2)',
-                                        'rgba(75, 192, 192, 0.2)',
-                                        'rgba(54, 162, 235, 0.2)',
 
-                                        'rgba(201, 203, 207, 0.2)'
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)',
+                                        'rgba(75, 192, 192, 0.2)'
+
+
+
                                     ],
                                     borderColor: [
-                                        'rgb(255, 99, 132)',
-                                        'rgb(240, 159, 0)',
-                                        'rgb(153, 102, 255)',
-                                        'rgb(75, 192, 192)',
-                                        'rgb(54, 162, 235)',
 
-                                        'rgb(201, 203, 207)'
+                                        'rgb(75, 192, 192)',
+                                        'rgb(75, 192, 192)',
+                                        'rgb(75, 192, 192)'
+
+
+
                                     ],
                                     borderWidth: 2
                                 },
@@ -366,22 +364,19 @@
                                     label: 'Highest Streak',
                                     data: [<?= $qs_data->max_streak ?>, <?= $qt_data->max_streak ?>, <?= $qd_data->max_streak ?>],
                                     backgroundColor: [
-                                        'rgba(255, 99, 132, 0.2)',
-                                        'rgba(255, 159, 64, 0.2)',
-                                        'rgba(153, 102, 255, 0.2)',
-                                        'rgba(75, 192, 192, 0.2)',
-                                        'rgba(54, 162, 235, 0.2)',
 
-                                        'rgba(201, 203, 207, 0.2)'
+                                        'rgba(54, 162, 235, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)',
+                                        'rgba(54, 162, 235, 0.2)'
+
+
                                     ],
                                     borderColor: [
-                                        'rgb(255, 99, 132)',
-                                        'rgb(240, 159, 0)',
-                                        'rgb(153, 102, 255)',
-                                        'rgb(75, 192, 192)',
-                                        'rgb(54, 162, 235)',
 
-                                        'rgb(201, 203, 207)'
+                                        'rgb(54, 162, 235)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(54, 162, 235)'
+
                                     ],
                                     borderWidth: 2
                                 }
@@ -439,7 +434,7 @@
                             labels: ['Reading Progress'],
                             datasets: [{
                                 label: '',
-                                data: [10],
+                                data: [<?php echo ($read_data->symptoms / 10) * 100 ?>],
                                 backgroundColor: [
 
                                     'rgb(255, 205, 86)'
@@ -462,7 +457,7 @@
                             labels: ['Reading Progress'],
                             datasets: [{
                                 label: '',
-                                data: [10],
+                                data: [<?php echo ($read_data->tips / 10) * 100 ?>],
                                 backgroundColor: [
 
                                     'rgb(255, 205, 86)'
@@ -485,7 +480,7 @@
                             labels: ['Reading Progress'],
                             datasets: [{
                                 label: '',
-                                data: [300],
+                                data: [<?php echo ($read_data->dealing / 10) * 100 ?> % ],
                                 backgroundColor: [
 
                                     'rgb(54, 162, 235)'
