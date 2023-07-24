@@ -35,8 +35,24 @@
     }
 </script>
 
+<style>
+    .row1 {
+        border-radius: 20px;
+    }
 
-<body id="page-top" style='background-color:white;'>
+    .row2 {
+        border-radius: 20px;
+        padding: 0px;
+        box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .row3 {
+        border-radius: 20px;
+    }
+</style>
+
+
+<body id="page-top" style='background-color:#ececec;'>
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -48,46 +64,46 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid ">
 
-                    <!-- Cards for registration -->
-                    <div class="row justify-content-md-center pt-5 pb-5" style='background-color:white;'>
 
-                        <!-- Steps -->
-                        <div class="col-xl-3">
-                            <div class="card h-100 " id='card1'>
-                                <div class="card-body" style="background-color:#DAE7E0">
+                <!-- Cards for registration -->
+                <div class="row justify-content-md-center pt-5 pb-5" style='background-color:#ececec;'>
 
-                                    <div class="pl-3 pr-3 pt-4">
-                                        <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Join Interactive Joint Education Employability System (iJEES) in</div>
-                                        <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:green; font-weight:900;">3 STEPS</div>
+                    <!-- Steps -->
+                    <div class="row1 col-xl-3">
+                        <div class="row1 card h-100 " id='card1'>
+                            <div class=" row1 card-body" style="background-color:#DAE7E0">
 
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">01</div>
-                                        </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">Select your role before you fill in your detail in the registration form.</div>
+                                <div class="pl-3 pr-3 pt-4">
+                                    <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Register Dementia APP in</div>
+                                    <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:green; font-weight:900;">3 STEPS</div>
 
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">02</div>
-                                        </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">If you already have an existing account, login now with your credentials. </div>
-
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">03</div>
-                                        </div>
-                                        <div class="pl-4 pb-5" style="font-size:14px; color:black;">After login, you are on the main page based on your role. </div>
-
+                                    <div class="pl-4">
+                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">01</div>
                                     </div>
+                                    <div class="pl-4 pb-3" style="font-size:14px; color:black;">Make sure your email address is correct before you fill in your detail in the registration form.</div>
+
+                                    <div class="pl-4">
+                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">02</div>
+                                    </div>
+                                    <div class="pl-4 pb-3" style="font-size:14px; color:black;">If you already have an existing account, login now with your credentials. </div>
+
+                                    <div class="pl-4">
+                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">03</div>
+                                    </div>
+                                    <div class="pl-4 pb-5" style="font-size:14px; color:black;">After login, you are on the main page based on your role. </div>
 
                                 </div>
+
                             </div>
                         </div>
-                        <!-- Form -->
-                        <div class="col-xl-6 ">
-                            <div class="card h-100" id='card2' ">
-                                <div class=" card-body">
+                    </div>
+                    <!-- Form -->
+                    <div class="row2 col-xl-6 ">
+                        <div class="row3 card h-100" id='card2'>
+                            <div class=" card-body">
                                 <center>
-                                    <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#787878; font-weight:700;">ROLE REGISTRATION PAGE</div>
+                                    <div class="pt-5 px-5" style="font-size:23px; font-weight:800; letter-spacing: 8px; color:#0B666A; font-weight:700;">REGISTRATION PAGE</div>
                                 </center>
                                 <!-- Input fields (Form) -->
                                 <form class="user" method="post" action="<?= base_url('user/auth/registration'); ?>">

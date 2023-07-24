@@ -231,7 +231,7 @@
                             <div class="col-xl-12 col-lg-12">
                                 <div class="card h-100 shadow mb-4">
                                     <div class="card-header py-3" style="background-color: #098886">
-                                        <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Score</div>
+                                        <div class="text-xs font-weight-bold mb-1" style="color: white; text-transform: uppercase;">Relation</div>
                                     </div>
 
                                     <div class="card-body" style="background-color: #f9f6f1">
@@ -480,7 +480,7 @@
                             labels: ['Reading Progress'],
                             datasets: [{
                                 label: '',
-                                data: [<?php echo ($read_data->dealing / 10) * 100 ?> % ],
+                                data: [<?php echo ($read_data->dealing / 10) * 100 ?>],
                                 backgroundColor: [
 
                                     'rgb(54, 162, 235)'

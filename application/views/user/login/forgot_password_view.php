@@ -10,7 +10,7 @@
     .container-fluid {
         width: 100%;
         height: 100vh;
-        background-image: url(<?php echo base_url('assets/img/background.png'); ?>);
+        background-color: #ececec;
         background-position: center;
         position: relative;
         overflow: auto;
@@ -18,22 +18,11 @@
 
     .transparent {
         position: relative;
-        background: transparent;
-        border: 3px solid rgba(255, 255, 255, 0.5);
+        /* border: 3px solid rgba(255, 255, 255, 0.5); */
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
 
     }
-
-    /* .card1 {
-        position: relative;
-        overflow: auto;
-        width: 100%;
-        /* Adjust the width of the card as needed */
-    /* height: 400px; */
-    /* Adjust the height of the card as needed */
-    /* background-position: right;
-    background-image: url(<?php echo base_url('assets/img/demen.jpg'); ?>);
-    border: 2px;
-    } */
 </style>
 
 <script>
@@ -96,7 +85,7 @@
                             <div class="card h-100 transparent" id='card2'>
                                 <div class=" card-body">
                                     <center>
-                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#F5F5F5; font-weight:700;">FORGOT YOUR PASSWORD?</div>
+                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#0B666A; font-weight:700;">FORGOT YOUR PASSWORD?</div>
                                     </center>
                                     <?= $this->session->flashdata('message') ?>
                                     <!-- Input fields (Form) -->

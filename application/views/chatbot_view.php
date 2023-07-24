@@ -48,7 +48,7 @@
         max-width: 100%;
     }
 
-/* 
+    /* 
     .convobody {
         position: relative;
     }
@@ -70,8 +70,6 @@
         border: none;
         padding: 0;
     } */
-
-    
 </style>
 
 <!-- Top Navigation -->
@@ -89,7 +87,7 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div style='background-color:white;' class="container-fluid">
+                <div style='background-color:#ececec;' class="container-fluid">
 
                     <div class="row">
                         <div class="col-md-8">
@@ -115,7 +113,7 @@
                                     <div class="row ">
                                         <div class="col-xl-2" style="border-right: black;" id="conversation_list">
 
-                                            
+
                                         </div>
 
                                         <div class="col-xl-10 px-5" id="conversation_body">
