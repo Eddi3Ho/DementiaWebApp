@@ -48,9 +48,9 @@
                         <div class="col-md-8">
                             <!-- Page Heading -->
                             <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4">
-                                <h1 class="h3 mb-0 pt-4 font-weight-bold" style="color:#000000">Dementia Quiz</h1>
+                                <h1 class="h3 mb-0 text-gray-800 pt-4 font-weight-bold">Dementia Quiz</h1>
                             </div>
-                            <div class="py-2 px-4" style="text-align: justify; font-weight:500; color:#000000">Finish all the quizzes and grab your well-deserved completion certificate!</div>
+                            <div class="py-2 px-4" style="text-align: justify; font-weight:500;">Finish all the quizzes and grab your well-deserved completion certificate!</div>
                         </div>
                         <div class="col-md-4 pt-5 pr-5">
                             <?php if ($qs_data->status == 3 && $qt_data->status == 3 && $qd_data->status == 3) { ?>
@@ -60,14 +60,14 @@
                     </div>
 
                     <div class="px-4 pb-4">
-                        <hr style=" width :100%; height:2px; background-color:#000000">
+                        <hr style=" width :100%; height:2px; background-color:#EAF4F4">
                     </div>
 
                     <div class="row justify-content-md-center pb-5 px-4">
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
                                 <div class="card shadow" style="border-radius: 20px;">
-                                    <div class="card-body text-center bg-" style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
+                                    <div class="card-body text-center bg-" style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #6b9080;">
                                         <h5 class="card-title pt-3" style="font-weight: 700; color:white;">Understanding Dementia Symptoms </h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
@@ -107,7 +107,7 @@
                         <div class="col-md-4 pb-5">
                             <div class="px-2">
                                 <div class="card shadow" style="border-radius: 20px;">
-                                    <div class="card-body text-center bg" style="border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #098886;">
+                                    <div class="card-body text-center bg" style="border-top-left-radius: 20px; border-top-right-radius: 20px; background-color: #6b9080;">
                                         <h5 class=" card-title pt-3" style="font-weight: 700; color:white;">Tips For Communicating With Dementia</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">
@@ -149,7 +149,7 @@
                             <div class="px-2">
 
                                 <div class="card shadow" style="border-radius: 20px;">
-                                    <div class="card-body text-center bg" style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #098886;">
+                                    <div class="card-body text-center bg" style="border-top-left-radius: 20px; border-top-right-radius: 20px;background-color: #6b9080;">
                                         <h5 class=" card-title pt-3" style="font-weight: 700; color:white;">Dealing With People With Dementia</h5>
                                     </div>
                                     <ul class="list-group list-group-flush">

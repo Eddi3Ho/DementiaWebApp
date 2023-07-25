@@ -7,6 +7,12 @@
 </script>
 
 <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+
     .container-fluid {
         width: 100%;
         height: 100vh;
@@ -49,43 +55,13 @@
                     <!-- Cards for registration -->
                     <div class="row justify-content-md-center pt-5 pb-5">
 
-                        <!-- Steps -->
-                        <!-- <div class="col-xl-3">
-                            <div class="card h-100 " id='card1'>
-                                <div class="card1"> -->
-                        <!-- <img src="<?php echo base_url('assets/img/demen.jpg'); ?>" alt=" logo" class="background-image"> -->
-
-                        <!-- <div class=" pl-3 pr-3 pt-4"> -->
-                        <!-- <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Join Interactive Joint Education Employability System (iJEES) in </div>
-                                        <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:green; font-weight:900;">3 STEPS</div>
-
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">01</div>
-                                        </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">Select your role before you fill in your detail in the registration form.</div>
-
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">02</div>
-                                        </div>
-                                        <div class="pl-4 pb-3" style="font-size:14px; color:black;">If you already have an existing account, login now with your credentials. </div>
-
-                                        <div class="pl-4">
-                                            <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">03</div>
-                                        </div>
-                                        <div class="pl-4 pb-5" style="font-size:14px; color:black;">After login, you are on the main page based on your role. </div> -->
-
-                        <!-- </div> -->
-
-                        <!-- </div>
-                            </div>
-                        </div> -->
 
                         <!-- Form -->
                         <div class="col-xl-6 ">
                             <div class="card h-100 transparent" id='card2'>
                                 <div class=" card-body">
                                     <center>
-                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#0B666A; font-weight:700;">FORGOT YOUR PASSWORD?</div>
+                                        <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#6b9080; font-weight:700;">FORGOT YOUR PASSWORD?</div>
                                     </center>
                                     <?= $this->session->flashdata('message') ?>
                                     <!-- Input fields (Form) -->

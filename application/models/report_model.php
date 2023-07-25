@@ -38,6 +38,14 @@ class report_model extends CI_Model
         return round($percentage, 2);
     }
 
+    // public function get_total_relation($database)
+    // {
+    //     $this->db->where('relation', $database);
+    //     return $this->db->get('relation')->row();
+    // }
+
+    //tips percentage
+
     // public function get_reportsymtom($user_id)
     // {
     //     $this->db->select('score');

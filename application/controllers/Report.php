@@ -24,6 +24,7 @@ class Report extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Dementia App | Report';
+		// $data['streak_percentage'] = $this->report_model->count_percentage($this->session->userdata('user_id'));
 
 
 		//quiz score

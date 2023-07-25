@@ -81,9 +81,9 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-2 px-4 pt-3">
-                        <h1 class="h3 mb-0  pt-4 font-weight-bold" style="color:#F5F5F5">Profile Settings</h1>
+                        <h1 class="h3 mb-0 text-gray-800 pt-4 font-weight-bold">Profile Settings</h1>
                     </div>
-                    <div class="pb-2 px-4" style="text-align: justify; font-weight:500;color:#F5F5F5">
+                    <div class="pb-2 px-4" style="text-align: justify; font-weight:500;">
                         Change your profile and account settings
                     </div>
                     <div class="col-12 pt-4">

@@ -220,7 +220,7 @@
                 <div class="col-md-6 right">
                     <div class="input-box">
                         <center>
-                            <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#0B666A; font-weight:800;">LOGIN PAGE</div>
+                            <div class="pt-5 px-5" style="font-size:23px; letter-spacing: 8px; color:#6b9080; font-weight:800;">LOGIN PAGE</div>
                         </center>
                         <?= $this->session->flashdata('message') ?>
                         <!-- Input fields (Form) -->
@@ -248,10 +248,10 @@
                         </form>
                         <!-- End of Input fields (Form) -->
                         <center>
-                            <div class="pt-5 pb-3">
+                            <div class="pt-5 pb-2">
                                 <a class="" style="text-align:center;" href="<?= base_url('user/auth/registration'); ?>">Register an account</a>
                             </div>
-                            <a class="mt-5" style="text-align:center;" href="<?= base_url("user/auth/forgotPassword"); ?>">Forget your password?</a>
+                            <a class="mt-5 " style="text-align:center;" href="<?= base_url("user/auth/forgotPassword"); ?>">Forget your password?</a>
                         </center>
                     </div>
 

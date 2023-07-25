@@ -87,7 +87,7 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div style='background-color:#ececec;' class="container-fluid">
+                <div style='background-color:#FFFF;' class="container-fluid">
 
                     <div class="row">
                         <div class="col-md-8">
@@ -108,7 +108,7 @@
                         <div class="col-xl-12">
 
                             <div class="card shadow ">
-                                <div class="card-body" style="min-height: 1000px;">
+                                <div class="card-body" style="min-height: 1000px; background-color:#ececec">
 
                                     <div class="row ">
                                         <div class="col-xl-2" style="border-right: black;" id="conversation_list">

@@ -36,6 +36,12 @@
 </script>
 
 <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+    * {
+        font-family: "Poppins", sans-serif;
+    }
+
     .row1 {
         border-radius: 20px;
     }
@@ -75,21 +81,21 @@
                             <div class=" row1 card-body" style="background-color:#DAE7E0">
 
                                 <div class="pl-3 pr-3 pt-4">
-                                    <div class="pl-4" style="font-size:16px; font-weight:700; color:black;">Register Dementia APP in</div>
-                                    <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:green; font-weight:900;">3 STEPS</div>
+                                    <div class="pl-4" style="font-size:16px; font-weight:800; color:black;">Register Dementia APP in</div>
+                                    <div class="pt-2 pl-4 pb-3" style="font-size:38px; color:#6b9080; font-weight:900;">3 STEPS</div>
 
                                     <div class="pl-4">
-                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">01</div>
+                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#6b9080; font-weight:900;">01</div>
                                     </div>
                                     <div class="pl-4 pb-3" style="font-size:14px; color:black;">Make sure your email address is correct before you fill in your detail in the registration form.</div>
 
                                     <div class="pl-4">
-                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">02</div>
+                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#6b9080; font-weight:900;">02</div>
                                     </div>
                                     <div class="pl-4 pb-3" style="font-size:14px; color:black;">If you already have an existing account, login now with your credentials. </div>
 
                                     <div class="pl-4">
-                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:green; font-weight:900;">03</div>
+                                        <div class="number pt-4 pl-4 pb-1" style="font-size:18px; color:#6b9080; font-weight:900;">03</div>
                                     </div>
                                     <div class="pl-4 pb-5" style="font-size:14px; color:black;">After login, you are on the main page based on your role. </div>
 
@@ -103,7 +109,7 @@
                         <div class="row3 card h-100" id='card2'>
                             <div class=" card-body">
                                 <center>
-                                    <div class="pt-5 px-5" style="font-size:23px; font-weight:800; letter-spacing: 8px; color:#0B666A; font-weight:700;">REGISTRATION PAGE</div>
+                                    <div class="pt-5 px-5" style="font-size:23px;letter-spacing: 8px; color:#6b9080; font-weight:800;">REGISTRATION PAGE</div>
                                 </center>
                                 <!-- Input fields (Form) -->
                                 <form class="user" method="post" action="<?= base_url('user/auth/registration'); ?>">
@@ -188,7 +194,7 @@
                                 <br><br>
                                 <!-- End of Input fields (Form) -->
                                 <center>
-                                    <div class="pt-5 pb-4">
+                                    <div class="pt-5 pb-3">
                                         <a style="text-align:center;" href="<?= base_url("user/auth/login"); ?>">Already have an account? Login!</a>
                                     </div>
                                     <div class="pb-2">

@@ -48,7 +48,7 @@
 </style>
 
 <!-- Topbar -->
-<nav class="navbar sticky-top navbar-expand topbar" style="background-color: #098886;">
+<nav class="navbar sticky-top navbar-expand topbar" style="background-color: #6b9080;">
 
     <!-- Logo Image-->
     <!-- <nav class="navbar navbar-light bg-light">   -->
@@ -61,19 +61,19 @@
     <ul class="navbar-nav mr-auto">
 
         <li class="nav-item px-3">
-            <a class="nav-link topnav font-weight-bold" href="<?= base_url('reading_corner'); ?>">Reading Corner</a>
+            <a class="nav-link topnav text-white font-weight-bold" href="<?= base_url('reading_corner'); ?>">Reading Corner</a>
         </li>
 
         <li class="nav-item px-3">
-            <a class="nav-link topnav font-weight-bold" href="<?= base_url('report'); ?>">Report</a>
+            <a class="nav-link topnav text-white font-weight-bold" href="<?= base_url('report'); ?>">Report</a>
         </li>
 
         <li class="nav-item px-3">
-            <a class="nav-link topnav font-weight-bold" href="<?= base_url('quiz'); ?>">Quiz</a>
+            <a class="nav-link topnav text-white font-weight-bold" href="<?= base_url('quiz'); ?>">Quiz</a>
         </li>
 
         <li class="nav-item px-3">
-            <a class="nav-link topnav font-weight-bold" href="<?= base_url('chatbot'); ?>">Chatbot</a>
+            <a class="nav-link topnav text-white font-weight-bold" href="<?= base_url('chatbot'); ?>">Chatbot</a>
         </li>
 
 
@@ -87,7 +87,7 @@
                 <img class="img-profile rounded-circle" src="<?= base_url('assets/img/chat_user/profile_pic.png'); ?>">
             </a>
             <!-- Dropdown - User Information -->
-            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #098886;" aria-labelledby="userDropdown">
+            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" style="background-color: #6b9080;" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="<?= base_url('user/profile'); ?>" style="color: #F5F5F5;">
                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                     Profile
