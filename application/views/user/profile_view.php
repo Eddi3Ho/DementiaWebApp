@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <style>
     .custom_nav:hover {
         background-color: #cce3de;
@@ -52,8 +54,8 @@
     }
 
     .share_icon {
-    text-decoration: none;
-  }
+        text-decoration: none;
+    }
 </style>
 
 <!-- Set base url to javascript variable-->
@@ -184,7 +186,7 @@
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-4 pt-4">
+                                                <!-- <div class="col-md-4 pt-4">
                                                     <div class="form-group">
                                                         <label for="hoursDropdown" style="font-weight: 600; font-size:1.2rem;">Select Hour:</label>
                                                         <select class="form-control" id="hoursDropdown">
@@ -199,7 +201,7 @@
                                                             ?>
                                                         </select>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                             <div class="tab-pane fade" id="invitefriend">
                                                 <h3 class="font-weight-bold">Invite a friend</h3>
@@ -222,11 +224,11 @@
                                                 </div>
                                                 <div class="row pt-2 pb-2">
                                                     <div class="col-md-12">
-                                                        <a class="share_icon" href="https://www.messenger.com/t/<PAGE_ID>?text=Learn%20more%20about%20dementia!%20<?php echo base_url('user/auth/registration/'.$user_data->invite_code); ?>" target="_blank">
+                                                        <a class="share_icon" href="https://www.messenger.com/t/<PAGE_ID>?text=Learn%20more%20about%20dementia!%20<?php echo base_url('user/auth/registration/' . $user_data->invite_code); ?>" target="_blank">
                                                             <img src="<?php echo base_url('assets/img/about_us/instagram-logo.png'); ?>" alt="Share on Instagram" style="height: 2.1rem; width: 2.1rem;">
                                                         </a>
 
-                                                        <a class="share_icon" href="https://web.whatsapp.com/send?text=Learn%20more%20about%20dementia!%20<?php echo base_url('user/auth/registration/'.$user_data->invite_code); ?>" target="_blank">
+                                                        <a class="share_icon" href="https://web.whatsapp.com/send?text=Learn%20more%20about%20dementia!%20<?php echo base_url('user/auth/registration/' . $user_data->invite_code); ?>" target="_blank">
                                                             <img src="<?php echo base_url('assets/img/about_us/whatsapp_icon.png'); ?>" alt="Share on WhatsApp" style="height: 3.6rem; width: 3.6rem;">
                                                         </a>
                                                     </div>
@@ -315,3 +317,41 @@
                 </script>
             <?php }
             $this->session->unset_userdata('edit_password_success'); ?>
+
+            <script>
+                $(document).ready(function() {
+                    // Listen for changes in the checkbox
+                    $('#check_notification').on('change', function() {
+                        // Get the checkbox value (checked or not)
+                        var isChecked = $(this).prop('checked');
+
+                        // If the checkbox is checked, save the selected time in localStorage
+                        if (isChecked) {
+                            var selectedHour = $('#hoursDropdown').val();
+                            localStorage.setItem('selectedHour', selectedHour);
+                        } else {
+                            localStorage.removeItem('selectedHour');
+                        }
+                    });
+
+                    // Function to send the email via AJAX
+                    function sendEmailViaAjax() {
+                        // Send an AJAX request to the server to trigger the email send
+                        $.ajax({
+                            type: 'POST',
+                            url: '<?php echo base_url("user/profile/send_email"); ?>',
+                            success: function(response) {
+                                // Handle the response from the server (optional)
+                                if (response === 'success') {
+                                    alert('Email sent successfully.');
+                                } else {
+                                    alert('Failed to send email.');
+                                }
+                            },
+                            error: function() {
+                                alert('An error occurred while sending the email.');
+                            }
+                        });
+                    }
+                });
+            </script>

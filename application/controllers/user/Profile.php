@@ -8,6 +8,7 @@ class Profile extends CI_Controller
     {
         parent::__construct();
         $this->load->model(['user_model']);
+        $this->load->helper('mailjet');
 
         // If user is not login bring them back to login page
         if (!$this->session->has_userdata('has_login')) {
@@ -58,14 +59,14 @@ class Profile extends CI_Controller
         } else {
             $response['status'] = 'error';
         }
-        
+
         echo json_encode($response);
     }
 
     public function update_password()
     {
         $data['user_id'] = $this->session->userdata('user_id');
-        $data['user_password']=password_hash($this->input->post('user_password'),PASSWORD_DEFAULT);
+        $data['user_password'] = password_hash($this->input->post('user_password'), PASSWORD_DEFAULT);
         $this->user_model->changepassword_with_id($data);
 
         $this->session->set_userdata('edit_password_success', 1);
